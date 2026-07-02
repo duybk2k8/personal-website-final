@@ -64,11 +64,16 @@ h1, h2, h3, h4, .intro_caption {
   text-align: center;
 }
 
-/*  FLEXBOX FOR SCHOLARSHIPS  */
+/*  ACHIEVEMENTS & SCHOLARSHIPS  */
+.achievements li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
 .award {
   text-align: left; /*Căn giữa*/
   width: 75%;
-  color: #212529;
 }
 
 .school{
@@ -82,8 +87,9 @@ h1, h2, h3, h4, .intro_caption {
   display: inline-block; /*hiện dạng inline ở 1 dòng*/
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
+
 
 /* FORMS & BUTTONS */
 .form {
