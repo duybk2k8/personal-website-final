@@ -1,0 +1,131 @@
+/*  BODY & TYPOGRAPHY  */
+body {
+  background-color: white;
+  padding: 20px; /*khoảng cách từ text ==> ô viền*/
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4, .intro_caption {
+  text-align: center;
+} /*căn text ở giữa*/
+
+/* CONTAINER & LAYOUT */
+.menu {
+  width: 90%; /*chiều rộng ô*/
+  background-image: url(https://i.postimg.cc/Rh9nYmTJ/anh1.webp); /*lấy ảnh làm nền*/
+  margin: auto; /*căn các phần tử cân bằng*/
+  border-radius: 12px; /*bo tròn*/
+  padding: 20px;
+}
+
+/* BANNER & SECTIONS */
+.title {
+  width: 95%;
+  padding: 15px;
+  background-color: rgb(0, 217, 255);
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid; /*đường viền cứng*/
+  border-color: rgb(0, 110, 255);
+  border-radius: 12px;
+}
+
+.title_1 {
+  width: 90%;
+  padding: 15px;
+  background-color: #00fff7;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: rgb(0, 110, 255);
+  border-left: 5px solid #0056b3;
+  border-right: 5px solid #0056b3;
+  border-top: none; border-bottom: none;
+}
+
+
+.paragraph{
+  width: 90%;
+  padding: 15px;
+  background-color: rgb(0, 255, 204);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  line-height: 1.6; /*khoảng cách giữa các dòng*/
+}
+
+.song, .video{
+  text-align: center;
+}
+
+/*  FLEXBOX FOR SCHOLARSHIPS  */
+.award {
+  text-align: left; /*Căn giữa*/
+  width: 75%;
+  color: #212529;
+}
+
+.school{
+  text-align: right;
+  width: 25%;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.item p {
+  display: inline-block; /*hiện dạng inline ở 1 dòng*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+/* FORMS & BUTTONS */
+.form {
+  width: 98%;
+  padding: 15px;
+  background-color: rgb(0, 255, 204);
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: rgb(0, 110, 255);
+  margin-bottom: 30px;
+  border-radius: 12px;
+}
+
+hr{
+  height: 2px;
+  background-color: yellow;
+  border-color:  black;
+}
+
+.aca-color{
+    color: brown;
+}
+
+footer {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 0px;
+}
+
+a:visited {
+  color: brown;
+}
+
+a:hover {
+  color: red;
+}
+
+a:focus {
+  color: green;
+}
+
+a:active {
+  color: black;
+}

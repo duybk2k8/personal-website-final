@@ -10,23 +10,26 @@
         content="Personal website" 
     /> <!--giúp web dc nhận diện tốt hơn khi SEO => thường hiện ở dưới link-->
     <title>Bùi Khánh Duy</title>
-    <link rel="stylesheet" href="style.css" /> <!--link với file css để styling-->
+    <link rel="stylesheet" href="bkd.css" /> <!--link với file css để styling-->
     <link rel="icon" href="https://i.postimg.cc/1tX0S33w/31ivt8k-BAFL-UXNa-N-FMjpg-QL85-removebg-preview-(1).png"> <!--dùng để tạo icon ở tab-->
   </head>
 
   <body>
-    <header>
+    <div class="menu">
+        <header>
         <section>
             <script>
                 alert("This is Duy's personal website!")
             </script>
         </section>
         
-        <section>   
+        <section class="title">   
             <h1>Khanh Duy Bui personal website</h1>
             <h2>@ Incoming student CS Student at <button id="uni-color">University of Waterloo</button></h2>
-            <p>This is my personal website where I will share my projects and experiences.</p>
+            <p class="intro_caption">This is my personal website where I will share my projects and experiences.</p>
         </section>
+        
+        <br>
 
         <section>
             <iframe 
@@ -45,7 +48,7 @@
         <hr>
 
         <section>
-            <h2>Table of Content</h2>
+            <h2 class="title_1">Table of Content</h2>
             <nav>
                 <ul>
                     <li><a href="#aboutme">About me</a></li>
@@ -58,225 +61,259 @@
         </section>
         <hr>
 
-    </header>
-    <main>
-        <section id="aboutme"> <!--chia các section cho dễ nhìn-->
-            <h2 class="section-title">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L12 2Z"/>
-                </svg> <!--path là đường đi, viewbox là giới hạn khung, xmlns là khai báo ngôn ngữ xml-->
-                About me
-            </h2>
+        </header>
+        <main>
+            <section id="aboutme"> <!--chia các section cho dễ nhìn-->
+                <h2 class="section-title title_1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L12 2Z"/>
+                    </svg> <!--path là đường đi, viewbox là giới hạn khung, xmlns là khai báo ngôn ngữ xml-->
+                    About me
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L12 2Z"/>
+                    </svg>
+                </h2>
 
-            <figure> <!--Chia thành các khối nhỏ khác--> <!--contain illustrations and diagrams-->
-                <img src="https://i.postimg.cc/wvWpt0zc/z7322237250203-f396424dc9dbfae6464b70ab38547ac2-(2).jpg" alt="My profile picture" />
-                <figcaption>
-                    <!--figcaption là để chú thích ảnh-->
-                    See more about me at <a href="https://www.linkedin.com/in/duy-b%C3%B9i-kh%C3%A1nh-498103363/" target="_blank">LinkedIn</a>
-                </figcaption>
-            </figure>
-            <p>My name is Bùi Khánh Duy, I am an incoming CS student at the University of Waterloo. I am passionate about programming and web development. I have experience in HTML, CSS, JavaScript, Python, and C++. I created this website to showcase my programming skills as well as my process of building my own website.</p>
-        </section>
+                <figure> <!--Chia thành các khối nhỏ khác--> <!--contain illustrations and diagrams-->
+                    <img src="https://i.postimg.cc/wvWpt0zc/z7322237250203-f396424dc9dbfae6464b70ab38547ac2-(2).jpg" alt="My profile picture" />
+                    <figcaption>
+                        <!--figcaption là để chú thích ảnh-->
+                        See more about me at <a href="https://www.linkedin.com/in/duy-b%C3%B9i-kh%C3%A1nh-498103363/" target="_blank">LinkedIn</a>
+                    </figcaption>
+                </figure>
+                <p class="paragraph">My name is Bùi Khánh Duy, I am an incoming CS student at the University of Waterloo. I am passionate about programming and web development. I have experience in HTML, CSS, JavaScript, Python, and C++. I created this website to showcase my programming skills as well as my process of building my own website.</p>
+            </section>
         
-        <hr>
+            <hr>
 
-        <section id="personalinterest">
-            <h2 class="section-title">
-                <!-- Heart Icon -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 21s-6-4.35-9.33-8.22C-.5 7.39 3.24 1 8.4 4.28 10.08 5.32 12 7.5 12 7.5s1.92-2.18 3.6-3.22C20.76 1 24.5 7.39 21.33 12.78 18 16.65 12 21 12 21z"/>
-                </svg> <!--path là đường đi, viewbox là giới hạn khung, xmlns là khai báo ngôn ngữ xml-->
-                My personal interest
-            </h2>
-            
-            <h3 class="aca-color">Song of the day</h3>
-            <img src="https://i.postimg.cc/8CZMkgrx/1704517365156-300.jpg" alt="Toronto 2014 image album"/>
+            <section id="personalinterest">
+                <h2 class="section-title title_1">
+                    <!-- Heart Icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21s-6-4.35-9.33-8.22C-.5 7.39 3.24 1 8.4 4.28 10.08 5.32 12 7.5 12 7.5s1.92-2.18 3.6-3.22C20.76 1 24.5 7.39 21.33 12.78 18 16.65 12 21 12 21z"/>
+                    </svg> <!--path là đường đi, viewbox là giới hạn khung, xmlns là khai báo ngôn ngữ xml-->
+                    My personal interest
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21s-6-4.35-9.33-8.22C-.5 7.39 3.24 1 8.4 4.28 10.08 5.32 12 7.5 12 7.5s1.92-2.18 3.6-3.22C20.76 1 24.5 7.39 21.33 12.78 18 16.65 12 21 12 21z"/>
+                    </svg>
+                </h2>
+                
+                <h3 class="aca-color">Song of the day</h3>
+                <div class="song">
+                    <img src="https://i.postimg.cc/8CZMkgrx/1704517365156-300.jpg" alt="Toronto 2014 image album"/>
+                    <br>
+                    <audio
+                        src="https://mp3tourl.com/audio/1781968018858-cb89f77b-95bf-4939-acc3-b79f8967dec1.mp3"
+                        controls
+                        loop
+                    ></audio>
+                    <!--controls để nó hiện cái bật nhạc, loop để nó quay lại nếu phát xong-->
+                </div>
+
+                <h3 class="aca-color">Video highlight</h3>
+                <div class="video">
+                    <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/JaWMb6iSQsM?autoplay=1"
+                    title="remix music"
+                    allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+        
+            <hr>
+        
+            <section id="personalexp">
+                <h2 class="section-title title_1">
+                    <!-- Checkmark Icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"/>
+                    </svg><!--path là đường đi, viewbox là giới hạn khung, xmlns là khai báo ngôn ngữ xml-->
+                    My personal experience
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"/>
+                    </svg>
+                </h2>
+
+                <h3>Academics</h3>
+                <p class="paragraph">I am going to graduate from Hanoi University of Science, High School for Gifted Students as an Informatics Specialized Student. This is my current academic standing: </p>
+                <h4 class="aca-color">Statistics</h4> <!--class là để tạo nên các phần giống nhau để sau này styling cho dễ-->
+                <ul>
+                    <li>Grades:
+                        <table>
+                            <thead>
+                                <th>Grade</th>
+                                <th>GPA (9 subjects)</th>
+                                <th>Rank</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td>9.73</td>
+                                    <td>2nd</td>
+                                </tr>
+
+                                <tr>
+                                    <td>11</td>
+                                    <td>9.75</td>
+                                    <td>1st</td>
+                                </tr>
+
+                                <tr>
+                                    <td>12</td>
+                                    <td>9.77</td>
+                                    <td>1st</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </li>
+                    <li>IELTS: 7.5</li>
+                    <li>SAT: 1510</li>
+                    <!--Line với ul là để tạo ra các gạch đầu dòng ===> nếu muốn đánh số dùng <ol>-->
+                </ul>
+                <h4 class="aca-color">Academic Achievements</h4> 
+                <ul>
+                    <li>Honourable Mention Award - Asian Students Exchange Program 2022</li>
+                    <li>Top 25% / Honour Roll - Canadian Intermediate Mathematics Contest 2023 (49/60)</li>
+                    <li>Top 25% / Honour Roll - Canadian Senior Mathematics Contest 2024 (41/60)</li>
+                    <li>Top 25% - Canadian Senior Mathematics Contest 2025 (41/60)</li>
+                    <li>Top 25% - Euclid Contest 2025 (76/100)</li>
+                    <li>Future Creator Award - Tech for Green Challenge 2025 (USD$40,000 Scholarship from Tulsa University, USA)</li>
+                    <li>Top 60/300 - FPT AI & Robotics Challenge 2025 (AI Round)</li>
+                    <li>Top 31/300 - FPT AI & Robotics Challenge 2025 (Robotics Round)</li>
+                    <li>Python for Everybody Certificate - University of Michigan (Coursera)</li>
+                    <li>Google Data Analytics Certificate (Coursera)</li>
+                    <li>Microsoft Copilot for Data Science Certificate (Coursera)</li>
+                    <li>ASEAN Data Science Explorers 2025 Enablement Session - SAP Analytics Cloud training session Certificate</li>
+                    <li>Certificate of First-Ranked Student (1/558) - First Midterm Examination, Academic Year 2025 - 2026.</li>
+                    <li>Certificate of First-Ranked Student (1/576) - Final Term Examination, Academic Year 2025 - 2026</li>
+                </ul>
+                <h4 class="aca-color">University Scholarships</h4>
+                <ul>
+                    <div class="item">
+                        <li><p class="award">CAD$49,000 Scholarship (Dean's Excellence Scholarship)</p><p class="school">McMaster University</p></li>
+                    </div>
+
+                    <div class="item">
+                        <li><p class="award">CAD$37,500 Scholarship (International Scholarship of Distinction)</p><p class="school">York University</p></li>
+                    </div>
+
+                    <div class="item">
+                        <li><p class="award">CAD$25,000 Scholarship (Outstanding International Scholarship)</p><p class="school">University of British Columbia</p></li>
+                    </div>
+
+                    <div class="item">
+                        <li><p class="award">CAD$20,000 Scholarship (UofT Scholar Award)</p><p class="school">University of Toronto</p></li>
+                    </div>
+
+                    <div class="item">
+                        <li><p class="award">CAD$17,500 Scholarship (International Leader Scholarship)</p><p class="school">University of Alberta</p></li>
+                    </div>
+
+                    <div class="item">
+                        <li><p class="award">CAD$15,000 Scholarship</p><p class="school">University of Waterloo</p></li>
+                    </div>
+
+                    <div class="item">
+                        <li><p class="award">CAD$10,000 Scholarship (International Excellence Entrance Scholarship)</p><p class="school">Simon Fraser University</p></li>
+                    </div>
+                </ul>
+            </section>
+
+            <hr>
             <br>
-            <audio
-                src="https://mp3tourl.com/audio/1781968018858-cb89f77b-95bf-4939-acc3-b79f8967dec1.mp3"
-                controls
-                loop
-            ></audio>
-            <!--controls để nó hiện cái bật nhạc, loop để nó quay lại nếu phát xong-->
-
-            <h3 class="aca-color">Video highlight</h3>
-            <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/JaWMb6iSQsM?autoplay=1"
-            title="remix music"
-            allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-            </iframe>
-        </section>
         
-        <hr>
-        
-        <section id="personalexp">
-            <h2 class="section-title">
-                <!-- Checkmark Icon -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"/>
-                </svg><!--path là đường đi, viewbox là giới hạn khung, xmlns là khai báo ngôn ngữ xml-->
-                My personal experience
-            </h2>
+            <section id="connection-form" class="form">
+                <form method="POST" action="">
+                    <fieldset>
+                        <legend><strong>READY TO CONNECT?</strong></legend>
+                        <p>Thank you for going all the way here!! If you want to connect, let me know through this form!!</p>
+                        <label for="full-name">Your name:</label>
+                        <input 
+                        id="full-name" 
+                        name="name" 
+                        type="text" 
+                        placeholder="e.g., Joe Sandy" 
+                        required 
+                        size="20">
+                    </fieldset>
 
-            <h3>Academics</h3>
-            <p>I am going to graduate from Hanoi University of Science, High School for Gifted Students as an Informatics Specialized Student. This is my current academic standing: </p>
-            <h4 class="aca-color">Statistics</h4> <!--class là để tạo nên các phần giống nhau để sau này styling cho dễ-->
-            <ul>
-                <li>Grades:
-                    <table>
-                        <thead>
-                            <th>Grade</th>
-                            <th>GPA (9 subjects)</th>
-                            <th>Rank</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>10</td>
-                                <td>9.73</td>
-                                <td>2nd</td>
-                            </tr>
+                    <fieldset>
+                        <legend>Which social media apps you want us to connect?</legend>
+                        
+                        <input
+                        id="instagram"
+                        name="choice"
+                        type="checkbox"
+                        value="Instagram"
+                        >
+                        <label for="instagram">Instagram</label>
 
-                            <tr>
-                                <td>11</td>
-                                <td>9.75</td>
-                                <td>1st</td>
-                            </tr>
+                        <input
+                        id="linkedin"
+                        name="choice"
+                        type="checkbox"
+                        value="linkedin"
+                        checked
+                        >
+                        <label for="linkedin">LinkedIn</label>
 
-                            <tr>
-                                <td>12</td>
-                                <td>9.77</td>
-                                <td>1st</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <input
+                        id="facebook"
+                        name="choice"
+                        type="checkbox"
+                        value="facebook"
+                        >
+                        <label for="facebook">Facebook</label>
 
+                        <input
+                        id="whatsapp"
+                        name="choice"
+                        type="checkbox"
+                        value="whatsapp"
+                        >
+                        <label for="whatsapp">Whatsapp</label>
+                        <br>
+                        <br>
+                        <label for="links">Your links to these medias?</label> <br>
+                        <textarea cols="30" rows="10" name="links" id="links"></textarea>
+                    </fieldset>
 
-                </li>
-                <li>IELTS: 7.5</li>
-                <li>SAT: 1510</li>
-                <!--Line với ul là để tạo ra các gạch đầu dòng ===> nếu muốn đánh số dùng <ol>-->
-            </ul>
-            <h4 class="aca-color">Academic Achievements</h4> 
-            <ul>
-                <li>Honourable Mention Award - Asian Students Exchange Program 2022</li>
-                <li>Top 25% / Honour Roll - Canadian Intermediate Mathematics Contest 2023 (49/60)</li>
-                <li>Top 25% / Honour Roll - Canadian Senior Mathematics Contest 2024 (41/60)</li>
-                <li>Top 25% - Canadian Senior Mathematics Contest 2025 (41/60)</li>
-                <li>Top 25% - Euclid Contest 2025 (76/100)</li>
-                <li>Future Creator Award - Tech for Green Challenge 2025 (USD$40,000 Scholarship from Tulsa University, USA)</li>
-                <li>Top 60/300 - FPT AI & Robotics Challenge 2025 (AI Round)</li>
-                <li>Top 31/300 - FPT AI & Robotics Challenge 2025 (Robotics Round)</li>
-                <li>Python for Everybody Certificate - University of Michigan (Coursera)</li>
-                <li>Google Data Analytics Certificate (Coursera)</li>
-                <li>Microsoft Copilot for Data Science Certificate (Coursera)</li>
-                <li>ASEAN Data Science Explorers 2025 Enablement Session - SAP Analytics Cloud training session Certificate</li>
-                <li>Certificate of First-Ranked Student (1/558) - First Midterm Examination, Academic Year 2025 - 2026.</li>
-                <li>Certificate of First-Ranked Student (1/576) - Final Term Examination, Academic Year 2025 - 2026</li>
-            </ul>
-            <h4 class="aca-color">University Scholarships</h4>
-            <ul>
-                <li>CAD$49,000 Scholarship (Dean's Excellence Scholarship) - McMaster University</li>
-                <li>CAD$37,500 Scholarship (International Scholarship of Distinction) - York University</li>
-                <li>CAD$25,000 Scholarship (Outstanding International Scholarship) - University of British Columbia</li>
-                <li>CAD$20,000 Scholarship (UofT Scholar Award) - University of Toronto</li>
-                <li>CAD$17,500 Scholarship (International Leader Scholarship) - University of Alberta</li>
-                <li>CAD$15,000 Scholarship - University of Waterloo</li>
-                <li>CAD$10,000 Scholarship (International Excellence Entrance Scholarship) - Simon Fraser University</li>
-            </ul>
-        </section>
+                    <p>Thank you for filling in! I will contact as soon as I can!! See you soon!</p>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
 
         <hr>
-        <br>
-        
-        <section id="connection-form">
-            <form method="POST" action="">
-                <fieldset>
-                    <legend><strong>READY TO CONNECT?</strong></legend>
-                    <p>Thank you for going all the way here!! If you want to connect, let me know through this form!!</p>
-                    <label for="full-name">Your name:</label>
-                    <input 
-                    id="full-name" 
-                    name="name" 
-                    type="text" 
-                    placeholder="e.g., Joe Sandy" 
-                    required 
-                    size="20">
-                </fieldset>
 
-                <fieldset>
-                    <legend>Which social media apps you want us to connect?</legend>
-                    
-                    <input
-                    id="instagram"
-                    name="choice"
-                    type="checkbox"
-                    value="Instagram"
-                    >
-                    <label for="instagram">Instagram</label>
-
-                    <input
-                    id="linkedin"
-                    name="choice"
-                    type="checkbox"
-                    value="linkedin"
-                    checked
-                    >
-                    <label for="linkedin">LinkedIn</label>
-
-                    <input
-                    id="facebook"
-                    name="choice"
-                    type="checkbox"
-                    value="facebook"
-                    >
-                    <label for="facebook">Facebook</label>
-
-                    <input
-                    id="whatsapp"
-                    name="choice"
-                    type="checkbox"
-                    value="whatsapp"
-                    >
-                    <label for="whatsapp">Whatsapp</label>
-                    <br>
-                    <br>
-                    <label for="links">Your links to these medias?</label> <br>
-                    <textarea cols="30" rows="10" name="links" id="links"></textarea>
-                </fieldset>
-
-                <p>Thank you for filling in! I will contact as soon as I can!! See you soon!</p>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
-
-    <hr>
-
-    <footer> <!--đặt ở đáy-->
-        <address id="contact">
-            <p>Contact for work: <a href="mailto:buiduy281008@gmail.com">buiduy281008@gmail.com</a></p>
-            <p>Phone: <a href="tel: +84948817746">+84 9488 177 46</a></p>
-            <div class="personal-contact"> <!--giống section nhưng chỉ dùng với mục đích styling-->
-                <button class="contact">LinkedIn</button>
-                <button class="contact">Instagram</button>
-                <button class="contact">Facebook</button>
-            </div>
-            <dl>
-            <dt>Contact for personal stuff
-                <dd>duybuikhanh5a0@gmail.com</dd>
-            </dt>
-            </dl>
-            <p>
-            203 Nguyen Huy Tuong<br />
-            Thanh Xuan, Hanoi 10000<br />
-            Vietnam
-            </p>
-        </address>
-    </footer>
+        <footer> <!--đặt ở đáy-->
+            <address id="contact">
+                <p>Contact for work: <a href="mailto:buiduy281008@gmail.com">buiduy281008@gmail.com</a></p>
+                <p>Phone: <a href="tel: +84948817746">+84 9488 177 46</a></p>
+                <div class="personal-contact"> <!--giống section nhưng chỉ dùng với mục đích styling-->
+                    <button class="contact">LinkedIn</button>
+                    <button class="contact">Instagram</button>
+                    <button class="contact">Facebook</button>
+                </div>
+                <dl>
+                <dt>Contact for personal stuff
+                    <dd>duybuikhanh5a0@gmail.com</dd>
+                </dt>
+                </dl>
+                <p>
+                203 Nguyen Huy Tuong<br />
+                Thanh Xuan, Hanoi 10000<br />
+                Vietnam
+                </p>
+            </address>
+        </footer>
+    </div>
   </body>
 </html>
 <!--class muốn style ở css thì dùng . còn id thì là #-->
