@@ -12,7 +12,7 @@ h1, h2, h3, h4, .intro_caption {
 /* CONTAINER & LAYOUT */
 .menu {
   width: 90%; /*chiều rộng ô*/
-  max-width: 900px;
+  max-width: 920px;
   background-image: url(https://i.postimg.cc/Rh9nYmTJ/anh1.webp); /*lấy ảnh làm nền*/
   margin: auto; /*căn các phần tử cân bằng*/
   border-radius: 12px; /*bo tròn*/
