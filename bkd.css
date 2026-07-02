@@ -12,6 +12,7 @@ h1, h2, h3, h4, .intro_caption {
 /* CONTAINER & LAYOUT */
 .menu {
   width: 90%; /*chiều rộng ô*/
+  max-width: 900px;
   background-image: url(https://i.postimg.cc/Rh9nYmTJ/anh1.webp); /*lấy ảnh làm nền*/
   margin: auto; /*căn các phần tử cân bằng*/
   border-radius: 12px; /*bo tròn*/
@@ -60,6 +61,12 @@ h1, h2, h3, h4, .intro_caption {
   line-height: 1.6; /*khoảng cách giữa các dòng*/
 }
 
+img {
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+} /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
+
 .song, .video{
   text-align: center;
 }
@@ -93,7 +100,8 @@ h1, h2, h3, h4, .intro_caption {
 
 /* FORMS & BUTTONS */
 .form {
-  width: 98%;
+  text-align:center;
+  width: 90%;
   padding: 15px;
   background-color: rgb(0, 255, 204);
   margin-left: auto;
