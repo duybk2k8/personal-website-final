@@ -72,6 +72,14 @@ img {
 }
 
 /*  ACHIEVEMENTS & SCHOLARSHIPS  */
+table {
+  width: 100%;
+}
+
+table th, table td {
+  text-align: left;
+}
+
 .achievements li{
   margin-top: 5px;
   margin-bottom: 5px;
