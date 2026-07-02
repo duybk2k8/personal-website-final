@@ -43,6 +43,10 @@ h1, h2, h3, h4, .intro_caption {
   border-top: none; border-bottom: none;
 }
 
+.map {
+  text-align:center;
+}
+
 
 .paragraph{
   width: 90%;
