@@ -165,6 +165,49 @@ table th, table td {
   border-radius: 12px;
 }
 
+.checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  vertical-align: middle;
+}
+/*inline-block cho cùng hàng cx dc nhưng tùy chỉnh dc height và width*/
+
+.checkbox:hover {
+  border-color: #888;
+}
+
+.checkbox:checked {
+  background-color: cyan;
+  border-color: #4caf50
+}
+
+.checkbox:checked::after{
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid brown;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg)
+}
+/*Đang làm dấu tick 
+làm chữ L => rotate
+position absolute là cố định chứ k relative*/
+.checkbox:focus{
+  outline: 2px solid #90caf9;
+  outline-offset: 2px;
+}
+/*offset đẩy ra xa phần tử 1 chút*/
+
 hr{
   height: 2px;
   background-color: yellow;
@@ -200,3 +243,4 @@ a:focus {
 a:active {
   color: black;
 }
+
