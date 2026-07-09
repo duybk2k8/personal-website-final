@@ -43,6 +43,38 @@ h1, h2, h3, h4, .intro_caption {
   border-right: 5px solid #0056b3;
   border-top: none; border-bottom: none;
 }
+/*CHỈNH TỪNG TITLE*/
+.section-title-0::before{
+  content:"✨ ";
+}
+
+.section-title-0::after{
+  content:" ✨";
+}
+
+.section-title-1::before{
+  content:"🌟 ";
+}
+
+.section-title-1::after{
+  content:" 🌟";
+}
+
+.section-title-2::before{
+  content:"❤️ ";
+}
+
+.section-title-2::after{
+  content:" ❤️";
+}
+
+.section-title-3::before{
+  content:"📖 ";
+}
+
+.section-title-3::after{
+  content:" 📖";
+}
 
 .map {
   text-align:center;
@@ -76,10 +108,38 @@ img {
   display: block; 
   margin-left: auto;
   margin-right: auto;
+  border: solid 2px black;
+
+  border-radius: 8px;
 } /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
+
+.about{
+  text-align: center;
+}
 
 .song, .video{
   text-align: center;
+}
+
+/*UW BUTTON*/
+.uw-logo{
+  color :black;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px;
+  background-color: #FED34C;
+
+  border-radius: 12px;
+  border: solid 2px black;
+
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.uw-logo:hover{
+  transition: transform 0.3s linear;
+  transform: scale(1.05)
 }
 
 /*TABLE OF CONTENT*/
@@ -166,7 +226,7 @@ table th, table td {
 }
 
 .blog-post-card:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: transform 0.3s linear;
 }
 
@@ -282,13 +342,6 @@ footer {
 address {
   font-style: normal;
   margin-bottom: 0px;
-}
-
-
-
-
-a:focus:not(.content-section) {
-  color: green;
 }
 
 a:active:not(.content-section) {
