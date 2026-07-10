@@ -280,6 +280,43 @@ table th, table td {
   border-radius: 12px;
 }
 
+input, button, textarea{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+input{
+  border-radius: 10px;
+  height: 25px;
+  border: #53A4CF 2px solid;
+  background-color: #F2F5FC;
+  padding: 5px;
+}
+
+button{
+  height: 40px;
+  width: 100px;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  font-weight: bold;
+  color: #2D74A8;
+  background-color: #D4EEED;
+}
+
+button:hover{
+  color: #154B95;
+  background-color: #F2F5FC;
+  transform: scale(1.05);
+  transition: transform 0.3s linear;
+}
+
+textarea{
+  width: 580px;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  background-color: #F2F5FC;
+}
+
 fieldset{
   border: 2px solid #53A4CF;
 }
@@ -357,3 +394,26 @@ a:active:not(.content-section) {
   color: black;
 }
 
+.contact{
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+
+  padding: 4px;
+  height: 30px;
+  width: 90px;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  font-weight: bold;
+  color: #2D74A8;
+  background-color: #D4EEED;
+  margin-right: 10px;
+}
+
+.contact:hover{
+  color: #154B95;
+  background-color: #F2F5FC;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
