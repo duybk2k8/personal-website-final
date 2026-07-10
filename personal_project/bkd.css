@@ -1,6 +1,6 @@
 /*  BODY & TYPOGRAPHY  */
 body {
-  background-color: white;
+  background-color: #F2F5FC;
   padding: 20px; /*khoảng cách từ text ==> ô viền*/
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -13,7 +13,7 @@ h1, h2, h3, h4, .intro_caption {
 .menu {
   width: 90%; /*chiều rộng ô*/
   max-width: 920px;
-  background-image: url(https://i.postimg.cc/Rh9nYmTJ/anh1.webp); /*lấy ảnh làm nền*/
+  background-color: #DDF5FF;
   margin: auto; /*căn các phần tử cân bằng*/
   border-radius: 12px; /*bo tròn*/
   padding: 20px;
@@ -23,24 +23,25 @@ h1, h2, h3, h4, .intro_caption {
 .title {
   width: 95%;
   padding: 15px;
-  background-color: rgb(0, 217, 255);
+  background-color: #2D74A8;
+  color: #F2F5FC;
   margin-left: auto;
   margin-right: auto;
-  border-style: solid; /*đường viền cứng*/
-  border-color: rgb(0, 110, 255);
+  border: solid #154B95; /*đường viền cứng*/
   border-radius: 12px;
 }
 
 .title_1 {
   width: 90%;
   padding: 15px;
-  background-color: #00fff7;
+  background-color: #8CC4DF;
+  color: #13293d;
   margin-left: auto;
   margin-right: auto;
   border-style: solid;
-  border-color: rgb(0, 110, 255);
-  border-left: 5px solid #0056b3;
-  border-right: 5px solid #0056b3;
+  border-color: #53A4CF;
+  border-left: 5px solid #154B95;
+  border-right: 5px solid #154B95;
   border-top: none; border-bottom: none;
 }
 /*CHỈNH TỪNG TITLE*/
@@ -76,9 +77,6 @@ h1, h2, h3, h4, .intro_caption {
   content:" 📖";
 }
 
-.map {
-  text-align:center;
-}
 
 h2:not(.post-title):not(.intro-big){
   box-shadow: 0 4px 8px rgb(198, 198, 198);
@@ -86,7 +84,7 @@ h2:not(.post-title):not(.intro-big){
 }
 /*box shadow là nền khung*/
 h2:hover:not(.post-title):not(.intro-big){
-  background-color: cyan;
+  background-color: #E6ECF8;
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
@@ -95,7 +93,8 @@ h2:hover:not(.post-title):not(.intro-big){
 .paragraph{
   width: 90%;
   padding: 15px;
-  background-color: #c1ecff;
+  background-color: #D4EEED;
+  color: #154B95;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
@@ -175,7 +174,7 @@ img {
 
 .content-section:hover{
   background-color: #FEFFCD;
-  color: brown;
+  color: #154B95;
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
@@ -221,7 +220,7 @@ table th, table td {
   background-color: white;
   width: 300px;
   text-align: center;
-  border: solid 2px #006494;
+  border: solid 2px #53A4CF;
   margin-bottom: 30px;
 }
 
@@ -235,35 +234,35 @@ table th, table td {
 }
 
 .read-more:hover{
-  color: #006494;
-  background-color: #65B5FF;
+  color: white;
+  background-color: #154B95;
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
 .read-more{
-  background-color: #73C6D9;
+  background-color: #53A4CF;
   margin: 10px;
   display: inline-block;
   border-radius: 12px;
   padding: 15px;
-  color: #e8f1f2;
+  color: white;
 }
 
 .post-img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-bottom: solid 4px #006494;
+  border-bottom: solid 4px #53A4CF;
   border-radius: 12px 12px 0 0;
 }
 
 .post-title{
-  color: #13293d;
+  color: #154B95;
   height: 50px;
 }
 .post-excerpt{
-  color: #006494;
+  color: #2D74A8;
   height: 100px;
 }
 
@@ -272,13 +271,22 @@ table th, table td {
   text-align:center;
   width: 90%;
   padding: 15px;
-  background-color: rgb(0, 255, 204);
+  background-color: #E6ECF8;
   margin-left: auto;
   margin-right: auto;
   border-style: solid;
-  border-color: rgb(0, 110, 255);
+  border-color: #8CC4DF;
   margin-bottom: 30px;
   border-radius: 12px;
+}
+
+fieldset{
+  border: 2px solid #53A4CF;
+}
+
+fieldset legend{
+  font-size: 18px;
+  color: #154B95;
 }
 
 .checkbox {
@@ -300,8 +308,8 @@ table th, table td {
 }
 
 .checkbox:checked {
-  background-color: cyan;
-  border-color: #4caf50
+  background-color: #8CC4DF;
+  border-color: #53A4CF;
 }
 
 .checkbox:checked::after{
@@ -311,7 +319,7 @@ table th, table td {
   top: 0px;
   width: 5px;
   height: 10px;
-  border: solid brown;
+  border: solid #154B95;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg)
 }
@@ -319,7 +327,7 @@ table th, table td {
 làm chữ L => rotate
 position absolute là cố định chứ k relative*/
 .checkbox:focus{
-  outline: 2px solid #90caf9;
+  outline: 2px solid #8CC4DF;
   outline-offset: 2px;
 }
 /*offset đẩy ra xa phần tử 1 chút*/
@@ -331,9 +339,10 @@ hr{
 }
 
 .aca-color{
-    color: brown;
+    color: #154B95;
 }
 
+/*FOOTER*/
 footer {
   font-size: 14px;
   margin-bottom: 5px;
