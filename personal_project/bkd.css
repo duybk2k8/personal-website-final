@@ -323,7 +323,8 @@ button:hover{
 }
 
 textarea{
-  width: 580px;
+  width: 100%;
+  max-width: 580px;
   border-radius: 12px;
   border: #53A4CF 2px solid;
   background-color: #F2F5FC;
