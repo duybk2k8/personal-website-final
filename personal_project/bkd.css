@@ -283,6 +283,7 @@ table th, table td {
 input, button, textarea{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 15px;
+  margin: 5px;
 }
 
 input{
@@ -291,6 +292,13 @@ input{
   border: #53A4CF 2px solid;
   background-color: #F2F5FC;
   padding: 5px;
+}
+
+input:focus, textarea:focus{
+  border-color: #53A4CF;
+  margin: 1px;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4); 
+  outline: none;     
 }
 
 button{
