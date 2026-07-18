@@ -5,7 +5,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h1, h2, h3, h4, .intro_caption {
+h1, h2, h3, h4 {
   text-align: center;
 } /*căn text ở giữa*/
 
@@ -22,6 +22,11 @@ h1, h2, h3, h4, .intro_caption {
 
 /* BANNER & SECTIONS */
 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
   width: 95%;
   padding: 15px;
   background-color: #2D74A8;
@@ -118,8 +123,17 @@ img {
   text-align: center;
 }
 
-.song, .video{
-  text-align: center;
+
+.song{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
 }
 
 /*UW BUTTON*/
@@ -133,8 +147,10 @@ img {
   border-radius: 12px;
   border: solid 2px black;
 
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   margin-left: 5px;
 }
 
@@ -215,9 +231,7 @@ table th, table td {
 }
 
 .item p {
-  display: inline-block; /*hiện dạng inline ở 1 dòng*/
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0;
   font-size: 16px;
 }
 
@@ -422,6 +436,16 @@ footer {
   margin-bottom: 5px;
 }
 
+#contact_0{
+  background-color: #E6ECF8;
+  padding: 7px;
+  border-radius: 8px;
+  line-height: 1.6; /*khoảng cách giữa các dòng*/
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+  margin-top: 70px;
+  margin-left: 50px;
+}
+
 address {
   font-style: normal;
   margin-bottom: 0px;
@@ -433,9 +457,9 @@ a:active:not(.content-section) {
 
 .contact{
   text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  line-height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   padding: 4px;
   height: 30px;
@@ -446,6 +470,7 @@ a:active:not(.content-section) {
   color: #2D74A8;
   background-color: #D4EEED;
   margin-right: 10px;
+  margin-bottom: 5px;
 
   box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
@@ -455,4 +480,10 @@ a:active:not(.content-section) {
   background-color: #F2F5FC;
   transform: scale(1.05);
   transition: transform 0.3s ease;
+}
+
+.personal-contact{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
