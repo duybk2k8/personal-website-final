@@ -17,6 +17,7 @@ h1, h2, h3, h4, .intro_caption {
   margin: auto; /*căn các phần tử cân bằng*/
   border-radius: 12px; /*bo tròn*/
   padding: 20px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
 /* BANNER & SECTIONS */
@@ -29,6 +30,7 @@ h1, h2, h3, h4, .intro_caption {
   margin-right: auto;
   border: solid #154B95; /*đường viền cứng*/
   border-radius: 12px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
 .title_1 {
@@ -77,7 +79,6 @@ h1, h2, h3, h4, .intro_caption {
   content:" 📖";
 }
 
-
 h2:not(.post-title):not(.intro-big){
   box-shadow: 0 4px 8px rgb(198, 198, 198);
   transition: transform 0.3s, background-color 0.3s ease;
@@ -101,6 +102,7 @@ h2:hover:not(.post-title):not(.intro-big){
   margin-bottom: 30px;
   border-radius: 8px;
   line-height: 1.6; /*khoảng cách giữa các dòng*/
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
 }
 
 img {
@@ -194,13 +196,16 @@ table th, table td {
   font-size: 16px;
 }
 
+.item{
+  display: flex;
+  justify-content: space-between;
+}
+
 .award {
-  text-align: left; /*Căn giữa*/
   width: 75%;
 }
 
 .school{
-  text-align: right;
   width: 25%;
   color: #6c757d;
   font-style: italic;
@@ -222,6 +227,7 @@ table th, table td {
   text-align: center;
   border: solid 2px #53A4CF;
   margin-bottom: 30px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
 .blog-post-card:hover{
@@ -278,6 +284,7 @@ table th, table td {
   border-color: #8CC4DF;
   margin-bottom: 30px;
   border-radius: 12px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
 input, button, textarea{
@@ -422,6 +429,8 @@ a:active:not(.content-section) {
   color: #2D74A8;
   background-color: #D4EEED;
   margin-right: 10px;
+
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
 .contact:hover{
