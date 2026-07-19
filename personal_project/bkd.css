@@ -244,9 +244,13 @@ table th, table td {
 }
 
 .blog-post-card{
+  display: flex;
+  flex-direction: column;
+
+  width: 31%;
+
   border-radius: 12px;
   background-color: white;
-  width: 280px;
   text-align: center;
   border: solid 2px #53A4CF;
   margin-bottom: 30px;
@@ -260,6 +264,17 @@ table th, table td {
 
 .post-content{
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.read-more{
+  background-color: #53A4CF;
+  margin-top: auto;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
 }
 
 .read-more:hover{
@@ -267,15 +282,6 @@ table th, table td {
   background-color: #154B95;
   transform: scale(1.1);
   transition: transform 0.3s ease;
-}
-
-.read-more{
-  background-color: #53A4CF;
-  margin: 10px;
-  display: inline-block;
-  border-radius: 12px;
-  padding: 15px;
-  color: white;
 }
 
 .post-img {
@@ -438,12 +444,12 @@ footer {
 
 #contact_0{
   background-color: #E6ECF8;
-  padding: 7px;
+  padding: 20px;
   border-radius: 8px;
   line-height: 1.6; /*khoảng cách giữa các dòng*/
   box-shadow: 0 4px 8px rgb(198, 198, 198);
   margin-top: 70px;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 address {
