@@ -11,7 +11,7 @@ h1, h2, h3, h4 {
 
 /* CONTAINER & LAYOUT */
 .menu {
-  width: 90%; /*chiều rộng ô*/
+  width: 95%; /*chiều rộng ô*/
   max-width: 920px;
   background-color: #DDF5FF;
   margin: auto; /*căn các phần tử cân bằng*/
