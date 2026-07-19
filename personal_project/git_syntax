@@ -1,0 +1,23 @@
+# 1. Chuyển sang main
+git switch main
+git pull origin main
+
+# 2. Tạo branch mới
+git switch -c flex_apply
+
+# 3. Code...
+git add .
+git commit -m "Implement flex apply feature"
+git push -u origin flex_apply
+
+# 4. Merge vào main
+git switch main
+git pull origin main
+git merge flex_apply
+
+# 5. Đẩy main
+git push origin main
+
+# 6. Xóa branch
+git branch -d flex_apply
+git push origin --delete flex_apply
