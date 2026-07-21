@@ -11,7 +11,7 @@ h1, h2, h3, h4 {
   text-align: center;
 } /*căn text ở giữa*/
 
-h3{
+.section-label{
   padding: 10px;
   background-color:#FBF2AD;
   width: 200px;
@@ -36,9 +36,11 @@ h3{
 /* BANNER & SECTIONS */
 .title {
   font-family: "IBM Plex Mono", monospace;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  line-height: 15px;
 
   width: 95%;
   padding: 15px;
@@ -118,7 +120,7 @@ h2:hover:not(.post-title):not(.intro-big){
 .paragraph{
   width: 90%;
   padding: 15px;
-  background-color: #D4EEED;
+  background-color: #F6FCFF;
   color: #154B95;
   margin-left: auto;
   margin-right: auto;
@@ -126,7 +128,6 @@ h2:hover:not(.post-title):not(.intro-big){
   margin-bottom: 30px;
   border-radius: 8px;
   line-height: 1.6; /*khoảng cách giữa các dòng*/
-  box-shadow: 0 4px 8px rgb(198, 198, 198);
 }
 
 img {
