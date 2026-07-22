@@ -138,10 +138,25 @@ img {
   display: block; 
   margin-left: auto;
   margin-right: auto;
-  border: solid 2px black;
 
-  border-radius: 8px;
+  padding: 17px;
+  border-radius: 12px;
+  background-color: #F6FCFF;
 } /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
+
+#fig-div{
+  padding: 10px;
+  background-color:#F6FCFF;
+  width: 250px;
+  border-radius:  0 0 9px 9px;
+  margin: -30px auto 20px auto;
+}
+
+figcaption{
+  padding: 5px;
+  border-radius: 9px;
+  background-color:#D4EEED;
+}
 
 .about{
   text-align: center;
