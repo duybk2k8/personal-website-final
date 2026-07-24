@@ -58,6 +58,9 @@ h1, h2, h3, h4 {
 }
 
 .title_1 {
+  position: sticky;
+  top: 20px;
+
   font-family: "IBM Plex Mono", monospace;
   width: 90%;
   padding: 15px;
@@ -134,7 +137,7 @@ h2:hover:not(.post-title):not(.intro-big){
   line-height: 1.6; /*khoảng cách giữa các dòng*/
 }
 
-img {
+img:not(.post-img){
   display: block; 
   margin-left: auto;
   margin-right: auto;
@@ -244,11 +247,40 @@ figcaption{
 
 /*  ACHIEVEMENTS & SCHOLARSHIPS  */
 table {
-  width: 100%;
+    width: 90%;
+    margin: 20px auto;
+    table-layout: fixed;
+}
+th, td{
+  text-align: center;
+  border: 1px black solid;
+
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
-table th, table td {
-  text-align: left;
+td{
+  background-color: #D4EEED;
+}
+
+tr[class="table-head"] > th{
+  background-color: #8CC4DF;
+}
+
+tr[class="table-head"] > th:first-child{
+  border-top-left-radius: 9px;
+}
+
+tr[class="table-head"] > th:last-child{
+  border-top-right-radius: 9px;
+}
+
+tr[class="table-bottom"] > td:first-child{
+  border-bottom-left-radius: 9px;
+}
+
+tr[class="table-bottom"] > td:last-child{
+  border-bottom-right-radius: 9px;
 }
 
 .achievements li{
