@@ -1,4 +1,3 @@
-/*đổi lại tick trong form
-các phần heading có transition
-custom lại cái nút ở menu
-đổi hết nút trái tim thành bên css*/
+/*
++) chỉnh hết chiều dài từ px sang % => adapt sang màn hình khác nhau
+*/
