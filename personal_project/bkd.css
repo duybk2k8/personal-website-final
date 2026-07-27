@@ -13,13 +13,12 @@ h1, h2, h3, h4 {
 } /*căn text ở giữa*/
 
 .section-label{
-  padding: 0.625px;
+  padding: 0.625rem;
   background-color:#FBF2AD;
   width: min(12.5rem, 80%);
-  border-radius: 0.75rem;
-  display: flex;
+  border-radius:  0 0 0.75rem 0.75rem;
   justify-content: center;
-  margin:-0.625rem auto 1.25rem;
+  margin: -0.625rem auto 1.25rem;
   box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
@@ -29,11 +28,11 @@ h1, h2, h3, h4 {
 /* CONTAINER & LAYOUT */
 .menu {
   width: 95%; /*chiều rộng ô*/
-  max-width:57.5rem;
+  max-width: 57.5rem;
   background-color: #DDF5FF;
   margin: auto; /*căn các phần tử cân bằng*/
-  border-radius: 12px; /*bo tròn*/
-  padding:1.25rem;
+  border-radius: 0.75rem; /*bo tròn*/
+  padding: 1.25rem;
   box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
@@ -44,7 +43,7 @@ h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  line-height: 15px;
+  line-height: 1.2;
 
   width: 95%;
   padding: 0.9375rem;
@@ -76,7 +75,7 @@ h1, h2, h3, h4 {
 }
 
 .intro_caption{
-  font-size: 0.95rem;;
+  font-size: 0.95rem;
 }
 
 /*CHỈNH TỪNG TITLE*/
@@ -142,22 +141,35 @@ img:not(.post-img){
   margin-left: auto;
   margin-right: auto;
 
+  max-width: 100%;
+  height: auto;
+
   padding: 1rem;
-  border-radius: 0.75rem;
+  border-radius: 3.75rem;
   background-color: #F6FCFF;
+  box-sizing: border-box;
 } /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
+
+
 
 #fig-div{
   padding: 0.625rem;
   background-color:#F6FCFF;
-  width:min(15rem,90%);
-  border-radius:  0 0 9px 9px;
-  margin: -30px auto 20px auto;
+  width: min(15rem , 90%);
+  border-radius: 0.5625rem;
+  margin: -1.075rem auto 1.25rem;
 }
 
+@media (max-width: 768px) {
+  #fig-div {
+    margin: -1rem auto 1rem;
+  }
+}
+/*Nếu nó <= 768px thì sẽ là -1 chứ k là -1.075 nữa*/
+
 figcaption{
-  padding: 5px;
-  border-radius: 9px;
+  padding: 0.3125rem; 
+  border-radius: 0.5625rem; 
   background-color:#D4EEED;
 }
 
@@ -177,7 +189,7 @@ figcaption{
 iframe{
   width: 100%;
   max-width: 560px;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/9; /*tỉ lệ khung hình*/
   height: auto;
 }
 
@@ -225,10 +237,9 @@ iframe{
   justify-content: center;
   align-items: center;
 
-  min-width: 6rem;
-  padding: 0.9rem 1rem;
-  margin-inline:1rem;
-  min-height:2.5rem;
+  height: 2.5rem;
+  width: 5.625rem;
+  margin: 0;
   text-decoration: none;
 
   background-color: #FBF2AD;
@@ -255,14 +266,13 @@ iframe{
 
 /*  ACHIEVEMENTS & SCHOLARSHIPS  */
 table {
-    width: 90%;
-    margin:1.25rem auto;
-    table-layout: fixed;
+  width: 90%;
+  margin: 1.25rem auto;
+  table-layout: fixed; /*k qtam nội dung mà dựa vào width để chia bảng*/
 }
 th, td{
   text-align: center;
   border: 1px black solid;
-
   padding: 0.45rem;
 }
 
@@ -275,19 +285,19 @@ tr[class="table-head"] > th{
 }
 
 tr[class="table-head"] > th:first-child{
-  border-top-left-radius: 9px;
+  border-top-left-radius: 0.5625rem;
 }
 
 tr[class="table-head"] > th:last-child{
-  border-top-right-radius: 9px;
+  border-top-right-radius: 0.5625rem;
 }
 
 tr[class="table-bottom"] > td:first-child{
-  border-bottom-left-radius: 9px;
+  border-bottom-left-radius: 0.5625rem;
 }
 
 tr[class="table-bottom"] > td:last-child{
-  border-bottom-right-radius: 9px;
+  border-bottom-right-radius: 0.5625rem;
 }
 
 .achievements li{
@@ -299,14 +309,17 @@ tr[class="table-bottom"] > td:last-child{
 .item{
   display: flex; /*dùng để tạo 1 hàng / cột linh hoạt cho phần tử con => căn*/
   justify-content: space-between;
+  align-items: baseline; /*căn phần tử theo đường baseline của văn bản*/
+  gap: 1.5rem;
 }
 
 .award {
-  width: 75%;
+  flex: 1; /*lấy toàn khoảng trống còn lại, tên trường nằm sát phải*/
 }
 
 .school{
-  width: 25%;
+  flex-shrink: 0; /*k cho co nhỏ khi k đủ chỗ*/
+  text-align: right;
   color: #6c757d;
   font-style: italic;
 }
@@ -316,11 +329,17 @@ tr[class="table-bottom"] > td:last-child{
   font-size: 1rem;
 }
 
+ul[class="scholarship"]{
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  margin-bottom: 2.1875rem;
+}
+
 /*BLOG*/
 .blog-container{
   display: flex;
   justify-content: center;
-  gap:1.25rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
@@ -332,15 +351,16 @@ tr[class="table-bottom"] > td:last-child{
   /*nó là flex-grow, flex-shrink, flex-basis
   +) flex-grow: dc phép dãn ra để lấp đầy
   +) flex-shrink: màn hình nhỏ lại thì phần tử dc co lại
-  +) flex-basis: kích thước ban đầu khi flex-bõ tính toán*/
+  +) flex-basis: kích thước ban đầu khi flex-bõ tính toán
+  Nếu co đến mức không hợp lý ⇒ nhờ flex-wrap sẽ xuống dòng*/
   max-width:22rem;
   /*dù có nhiều khoảng trống thì kbh rộng hơn 22rem*/
 
-  border-radius: 12px;
+  border-radius: 0.75rem;
   background-color: white;
   text-align: center;
   border: solid 2px #53A4CF;
-  margin-bottom: 30px;
+  margin-bottom: 2.1875rem;
   box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
@@ -350,7 +370,7 @@ tr[class="table-bottom"] > td:last-child{
 }
 
 .post-content{
-  padding: 15px;
+  padding: 0.9375rem;
   display: flex;
   flex-direction: column;
 }
@@ -359,15 +379,15 @@ tr[class="table-bottom"] > td:last-child{
   background-color: #53A4CF;
   margin-top: auto;
   display: inline-block;
-  border-radius: 12px;
-  padding: 15px;
+  border-radius: 0.75rem;
+  padding: 0.9375rem;
   color: white;
 }
 
 .read-more:hover{
   color: white;
   background-color: #154B95;
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
@@ -378,7 +398,7 @@ tr[class="table-bottom"] > td:last-child{
   object-fit: cover;
   border: none;
   border-bottom: solid 4px #53A4CF;
-  border-radius: 12px 12px 0 0;
+  border-radius: 0.75rem 0.75rem 0 0;
 }
 
 .post-title{
@@ -387,7 +407,7 @@ tr[class="table-bottom"] > td:last-child{
 }
 .post-excerpt{
   color: #2D74A8;
-  min-height: 8.5rem;
+  min-height: 140px;
   line-height: 1.5;
 }
 
@@ -411,13 +431,13 @@ input, button, textarea{
   font-size: 1rem;
   margin: 0.3125rem;
   padding: 0.3125rem;
-  color: #154B95
+  color: #154B95;
 }
 
 
 input{
   border-radius: 10px;
-  min-height: 2.5rem;
+  height: 2.5rem;
   border: #53A4CF 2px solid;
   background-color: #F2F5FC;
   padding: 0.3125rem;
@@ -425,16 +445,16 @@ input{
 
 input:focus, textarea:focus{
   border-color: #53A4CF;
-  margin: 1px;
+  margin: 0.0625rem;
   box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4); 
   outline: none;     
 }
 
 button{
   padding: 0.8rem 1.5rem;
-  width:auto;
+  width: auto;
   min-width: 6rem;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   border: #53A4CF 2px solid;
   font-weight: bold;
   color: #2D74A8;
@@ -451,24 +471,26 @@ button:hover{
 textarea{
   width: 100%;
   max-width: 36rem;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   border: #53A4CF 2px solid;
   background-color: #F2F5FC;
+  box-sizing: border-box;
 }
 
 fieldset{
   border: 2px solid #53A4CF;
+  border-radius: 0.75rem;
 }
 
 fieldset legend{
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #154B95;
 }
 
 .checkbox {
   appearance: none;
-  width:18px;
-  height:18px;
+  width: 1.125rem;
+  height: 1.125rem;
   border: 2px solid #ccc;
   border-radius: 4px;
   display: inline-block;
@@ -491,10 +513,10 @@ fieldset legend{
 .checkbox:checked::after{
   content: "";
   position: absolute;
-  left: 4px;
-  top: 0px;
-  width: 5px;
-  height: 10px;
+  left: 0.25rem;     
+  top: 0;
+  width: 0.3125rem;  
+  height: 0.625rem;
   border: solid #154B95;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg)
@@ -508,10 +530,10 @@ position absolute là cố định chứ k relative*/
 }
 /*offset đẩy ra xa phần tử 1 chút*/
 
-hr{
-  height: 2px;
-  background-color: yellow;
-  border-color:  black;
+hr {
+  border: none;
+  height: 3px;
+  background-color: #FBF2AD;
 }
 
 .aca-color{
@@ -526,23 +548,24 @@ footer {
   text-wrap: wrap;
   gap: 2.5rem;
   flex-wrap: wrap;
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 0.875rem; 
+  margin-bottom: 0.3125rem; 
 }
 
 #contact_0{
   background-color: #E6ECF8;
-  padding: 1.25rem;
   border-radius: 8px;
   line-height: 1.6; /*khoảng cách giữa các dòng*/
   box-shadow: 0 4px 8px rgb(198, 198, 198);
-  margin-top: 4rem;
-  margin-left: 2rem;
+  padding: 1.25rem;        /* 20 ÷ 16 */
+  margin-top: 2.375rem;
+  margin-bottom: 2.375rem;   
+  margin-left: 2.5rem; 
 }
 
 address {
   font-style: normal;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 a:active:not(.content-section) {
@@ -555,16 +578,16 @@ a:active:not(.content-section) {
   justify-content: center;
   align-items: center;
 
-  min-width: 6rem;
-  padding: 0.5rem 0.8rem;
-  min-height: 2rem;
-  border-radius: 12px;
+  padding: 0.25rem;  
+  height: 1.875rem;  
+  width: 5.625rem; 
+  border-radius: 0.75rem;
   border: #53A4CF 2px solid;
   font-weight: bold;
   color: #2D74A8;
   background-color: #D4EEED;
-  margin-right: 10px;
-  margin-bottom: 5px;
+  margin-right: 0.625rem;  
+  margin-bottom: 0.3125rem;
 
   box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
@@ -578,6 +601,12 @@ a:active:not(.content-section) {
 
 .personal-contact{
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
   flex-wrap: wrap;
+}
+
+.map{
+  margin-top: 3.375rem;
+  margin-bottom: 2.375rem;  
+  margin-right: 2.5rem;  
 }
