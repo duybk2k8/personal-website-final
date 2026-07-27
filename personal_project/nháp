@@ -1,3 +1,569 @@
-/*
-+) chỉnh hết chiều dài từ px sang % => adapt sang màn hình khác nhau
-*/
+
+/*  BODY & TYPOGRAPHY  */
+body {
+  background-color: #F2F5FC;
+  padding: 20px; /*khoảng cách từ text ==> ô viền*/
+  font-family: "Exo 2", sans-serif;
+
+}
+
+h1, h2, h3, h4 {
+  font-family: "IBM Plex Mono", monospace;
+  text-align: center;
+} /*căn text ở giữa*/
+
+.section-label{
+  padding: 10px;
+  background-color:#FBF2AD;
+  width: 200px;
+  border-radius:  0 0 12px 12px;
+  display: flex;
+  justify-content: center;
+  margin: -10px auto 20px auto;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+*{
+  scroll-behavior: smooth;
+}
+/* CONTAINER & LAYOUT */
+.menu {
+  width: 95%; /*chiều rộng ô*/
+  max-width: 920px;
+  background-color: #DDF5FF;
+  margin: auto; /*căn các phần tử cân bằng*/
+  border-radius: 12px; /*bo tròn*/
+  padding: 20px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+/* BANNER & SECTIONS */
+.title {
+  font-family: "IBM Plex Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 15px;
+
+  width: 95%;
+  padding: 15px;
+  background-color: #2D74A8;
+  color: #F2F5FC;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid #154B95; /*đường viền cứng*/
+  border-radius: 12px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+.title_1 {
+  position: sticky;
+  top: 20px;
+
+  font-family: "IBM Plex Mono", monospace;
+  width: 90%;
+  padding: 15px;
+  background-color: #8CC4DF;
+  color: #13293d;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: #53A4CF;
+  border-left: 5px solid #154B95;
+  border-right: 5px solid #154B95;
+  border-top: none; border-bottom: none;
+}
+
+.intro_caption{
+  font-size: 15px;
+}
+
+/*CHỈNH TỪNG TITLE*/
+.section-title-0::before{
+  content:"✨ ";
+}
+
+.section-title-0::after{
+  content:" ✨";
+}
+
+.section-title-1::before{
+  content:"🌟 ";
+}
+
+.section-title-1::after{
+  content:" 🌟";
+}
+
+.section-title-2::before{
+  content:"❤️ ";
+}
+
+.section-title-2::after{
+  content:" ❤️";
+}
+
+.section-title-3::before{
+  content:"📖 ";
+}
+
+.section-title-3::after{
+  content:" 📖";
+}
+
+h2:not(.post-title):not(.intro-big){
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+/*box shadow là nền khung*/
+h2:hover:not(.post-title):not(.intro-big){
+  background-color: #E6ECF8;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+/*chạm vào thì phóng 1.1 => scale*/
+
+.paragraph{
+  width: 90%;
+  padding: 15px;
+  background-color: #F6FCFF;
+  color: #154B95;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  line-height: 1.6; /*khoảng cách giữa các dòng*/
+}
+
+img:not(.post-img){
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 17px;
+  border-radius: 12px;
+  background-color: #F6FCFF;
+} /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
+
+#fig-div{
+  padding: 10px;
+  background-color:#F6FCFF;
+  width: 250px;
+  border-radius:  0 0 9px 9px;
+  margin: -30px auto 20px auto;
+}
+
+figcaption{
+  padding: 5px;
+  border-radius: 9px;
+  background-color:#D4EEED;
+}
+
+.about{
+  text-align: center;
+}
+
+
+.song{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+/*UW BUTTON*/
+.uw-logo{
+  color :black;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px;
+  background-color: #FED34C;
+
+  border-radius: 12px;
+  border: solid 2px black;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-left: 5px;
+  vertical-align: text-bottom;
+}
+
+.uw-logo:hover{
+  transition: transform 0.3s linear;
+  transform: scale(1.05)
+}
+
+/*TABLE OF CONTENT*/
+.table-of-content{
+  display: flex;
+  justify-content: space-evenly; /*chia đều kcach với nhau theo trục ngang*/
+  flex-wrap: wrap;  /*xuống dòng nếu tràn*/
+}
+
+.content-section{
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  width: 90px;
+  margin: 0;
+  text-decoration: none;
+
+  background-color: #FBF2AD;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid black;
+
+  padding: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+
+.content-section:hover{
+  background-color: #FEFFCD;
+  color: #154B95;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/*  ACHIEVEMENTS & SCHOLARSHIPS  */
+table {
+    width: 90%;
+    margin: 20px auto;
+    table-layout: fixed;
+}
+th, td{
+  text-align: center;
+  border: 1px black solid;
+
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+td{
+  background-color: #D4EEED;
+}
+
+tr[class="table-head"] > th{
+  background-color: #8CC4DF;
+}
+
+tr[class="table-head"] > th:first-child{
+  border-top-left-radius: 9px;
+}
+
+tr[class="table-head"] > th:last-child{
+  border-top-right-radius: 9px;
+}
+
+tr[class="table-bottom"] > td:first-child{
+  border-bottom-left-radius: 9px;
+}
+
+tr[class="table-bottom"] > td:last-child{
+  border-bottom-right-radius: 9px;
+}
+
+.achievements li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.item{
+  display: flex; /*dùng để tạo 1 hàng / cột linh hoạt cho phần tử con => căn*/
+  justify-content: space-between;
+}
+
+.award {
+  width: 75%;
+}
+
+.school{
+  width: 25%;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.item p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/*BLOG*/
+.blog-container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-post-card{
+  display: flex;
+  flex-direction: column;
+
+  width: 31%;
+
+  border-radius: 12px;
+  background-color: white;
+  text-align: center;
+  border: solid 2px #53A4CF;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+.blog-post-card:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s linear;
+}
+
+.post-content{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.read-more{
+  background-color: #53A4CF;
+  margin-top: auto;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+}
+
+.read-more:hover{
+  color: white;
+  background-color: #154B95;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.post-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: none;
+  border-bottom: solid 4px #53A4CF;
+  border-radius: 12px 12px 0 0;
+}
+
+.post-title{
+  color: #154B95;
+  min-height: 90px;
+}
+.post-excerpt{
+  color: #2D74A8;
+  min-height: 140px;
+  line-height: 1.5;
+}
+
+/* FORMS & BUTTONS */
+.form {
+  text-align:center;
+  width: 90%;
+  padding: 15px;
+  background-color: #E6ECF8;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: #8CC4DF;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+input, button, textarea{
+  font-family: "Exo 2", sans-serif;
+  font-size: 15px;
+  margin: 5px;
+  padding: 5px;
+  padding-left: 5px;
+  color: #154B95
+}
+
+
+input{
+  border-radius: 10px;
+  height: 25px;
+  border: #53A4CF 2px solid;
+  background-color: #F2F5FC;
+  padding: 5px;
+}
+
+input:focus, textarea:focus{
+  border-color: #53A4CF;
+  margin: 1px;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4); 
+  outline: none;     
+}
+
+button{
+  height: 40px;
+  width: 100px;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  font-weight: bold;
+  color: #2D74A8;
+  background-color: #D4EEED;
+}
+
+button:hover{
+  color: #154B95;
+  background-color: #F2F5FC;
+  transform: scale(1.05);
+  transition: transform 0.3s linear;
+}
+
+textarea{
+  width: 100%;
+  max-width: 580px;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  background-color: #F2F5FC;
+}
+
+fieldset{
+  border: 2px solid #53A4CF;
+}
+
+fieldset legend{
+  font-size: 18px;
+  color: #154B95;
+}
+
+.checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  vertical-align: middle;
+}
+/*inline-block cho cùng hàng cx dc nhưng tùy chỉnh dc height và width*/
+
+.checkbox:hover {
+  border-color: #888;
+}
+
+.checkbox:checked {
+  background-color: #8CC4DF;
+  border-color: #53A4CF;
+}
+
+.checkbox:checked::after{
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #154B95;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg)
+}
+/*Đang làm dấu tick 
+làm chữ L => rotate
+position absolute là cố định chứ k relative*/
+.checkbox:focus{
+  outline: 2px solid #8CC4DF;
+  outline-offset: 2px;
+}
+/*offset đẩy ra xa phần tử 1 chút*/
+
+hr{
+  height: 2px;
+  background-color: yellow;
+  border-color:  black;
+}
+
+.aca-color{
+    color: #154B95;
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-wrap: wrap;
+  gap: 40px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#contact_0{
+  background-color: #E6ECF8;
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 1.6; /*khoảng cách giữa các dòng*/
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+  margin-top: 70px;
+  margin-left: 40px;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 0px;
+}
+
+a:active:not(.content-section) {
+  color: black;
+}
+
+.contact{
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4px;
+  height: 30px;
+  width: 90px;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  font-weight: bold;
+  color: #2D74A8;
+  background-color: #D4EEED;
+  margin-right: 10px;
+  margin-bottom: 5px;
+
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+.contact:hover{
+  color: #154B95;
+  background-color: #F2F5FC;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.personal-contact{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

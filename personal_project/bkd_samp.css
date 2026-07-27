@@ -1,0 +1,583 @@
+
+/*  BODY & TYPOGRAPHY  */
+body {
+  background-color: #F2F5FC;
+  padding: 1.25rem; /*khoảng cách từ text ==> ô viền*/
+  font-family: "Exo 2", sans-serif;
+
+}
+
+h1, h2, h3, h4 {
+  font-family: "IBM Plex Mono", monospace;
+  text-align: center;
+} /*căn text ở giữa*/
+
+.section-label{
+  padding: 0.625px;
+  background-color:#FBF2AD;
+  width: min(12.5rem, 80%);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  margin:-0.625rem auto 1.25rem;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+*{
+  scroll-behavior: smooth;
+}
+/* CONTAINER & LAYOUT */
+.menu {
+  width: 95%; /*chiều rộng ô*/
+  max-width:57.5rem;
+  background-color: #DDF5FF;
+  margin: auto; /*căn các phần tử cân bằng*/
+  border-radius: 12px; /*bo tròn*/
+  padding:1.25rem;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+/* BANNER & SECTIONS */
+.title {
+  font-family: "IBM Plex Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 15px;
+
+  width: 95%;
+  padding: 0.9375rem;
+  background-color: #2D74A8;
+  color: #F2F5FC;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid #154B95; /*đường viền cứng*/
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+.title_1 {
+  position: sticky;
+  top: 1.25rem;
+
+  font-family: "IBM Plex Mono", monospace;
+  width: 90%;
+  padding: 0.9375rem;
+  background-color: #8CC4DF;
+  color: #13293d;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: #53A4CF;
+  border-left: 5px solid #154B95;
+  border-right: 5px solid #154B95;
+  border-top: none; border-bottom: none;
+}
+
+.intro_caption{
+  font-size: 0.95rem;;
+}
+
+/*CHỈNH TỪNG TITLE*/
+.section-title-0::before{
+  content:"✨ ";
+}
+
+.section-title-0::after{
+  content:" ✨";
+}
+
+.section-title-1::before{
+  content:"🌟 ";
+}
+
+.section-title-1::after{
+  content:" 🌟";
+}
+
+.section-title-2::before{
+  content:"❤️ ";
+}
+
+.section-title-2::after{
+  content:" ❤️";
+}
+
+.section-title-3::before{
+  content:"📖 ";
+}
+
+.section-title-3::after{
+  content:" 📖";
+}
+
+h2:not(.post-title):not(.intro-big){
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+/*box shadow là nền khung*/
+h2:hover:not(.post-title):not(.intro-big){
+  background-color: #E6ECF8;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+/*chạm vào thì phóng 1.1 => scale*/
+
+.paragraph{
+  width: 90%;
+  padding: 0.9375rem;
+  background-color: #F6FCFF;
+  color: #154B95;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  line-height: 1.6; /*khoảng cách giữa các dòng*/
+}
+
+img:not(.post-img){
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: #F6FCFF;
+} /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
+
+#fig-div{
+  padding: 0.625rem;
+  background-color:#F6FCFF;
+  width:min(15rem,90%);
+  border-radius:  0 0 9px 9px;
+  margin: -30px auto 20px auto;
+}
+
+figcaption{
+  padding: 5px;
+  border-radius: 9px;
+  background-color:#D4EEED;
+}
+
+.about{
+  text-align: center;
+}
+
+
+.song{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+iframe{
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.1875rem;
+}
+
+/*UW BUTTON*/
+.uw-logo{
+  color :black;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  background-color: #FED34C;
+
+  border-radius: 0.75rem;
+  border: solid 2px black;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-left: 0.3125rem;
+  vertical-align: text-bottom;
+}
+
+.uw-logo:hover{
+  transition: transform 0.3s linear;
+  transform: scale(1.05)
+}
+
+/*TABLE OF CONTENT*/
+.table-of-content{
+  display: flex;
+  justify-content: space-evenly; /*chia đều kcach với nhau theo trục ngang*/
+  flex-wrap: wrap;  /*xuống dòng nếu tràn*/
+}
+
+.content-section{
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 6rem;
+  padding: 0.9rem 1rem;
+  margin-inline:1rem;
+  min-height:2.5rem;
+  text-decoration: none;
+
+  background-color: #FBF2AD;
+  border-radius: 0.75rem;
+  text-align: center;
+  border: 2px solid black;
+
+  padding: 0.9375rem;
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+  margin-bottom: 1.25rem;
+
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+
+.content-section:hover{
+  background-color: #FEFFCD;
+  color: #154B95;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/*  ACHIEVEMENTS & SCHOLARSHIPS  */
+table {
+    width: 90%;
+    margin:1.25rem auto;
+    table-layout: fixed;
+}
+th, td{
+  text-align: center;
+  border: 1px black solid;
+
+  padding: 0.45rem;
+}
+
+td{
+  background-color: #D4EEED;
+}
+
+tr[class="table-head"] > th{
+  background-color: #8CC4DF;
+}
+
+tr[class="table-head"] > th:first-child{
+  border-top-left-radius: 9px;
+}
+
+tr[class="table-head"] > th:last-child{
+  border-top-right-radius: 9px;
+}
+
+tr[class="table-bottom"] > td:first-child{
+  border-bottom-left-radius: 9px;
+}
+
+tr[class="table-bottom"] > td:last-child{
+  border-bottom-right-radius: 9px;
+}
+
+.achievements li{
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+  font-size: 1rem;
+}
+
+.item{
+  display: flex; /*dùng để tạo 1 hàng / cột linh hoạt cho phần tử con => căn*/
+  justify-content: space-between;
+}
+
+.award {
+  width: 75%;
+}
+
+.school{
+  width: 25%;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.item p {
+  margin: 0.3125rem 0;
+  font-size: 1rem;
+}
+
+/*BLOG*/
+.blog-container{
+  display: flex;
+  justify-content: center;
+  gap:1.25rem;
+  flex-wrap: wrap;
+}
+
+.blog-post-card{
+  display: flex;
+  flex-direction: column;
+
+  flex:1 1 18rem;
+  /*nó là flex-grow, flex-shrink, flex-basis
+  +) flex-grow: dc phép dãn ra để lấp đầy
+  +) flex-shrink: màn hình nhỏ lại thì phần tử dc co lại
+  +) flex-basis: kích thước ban đầu khi flex-bõ tính toán*/
+  max-width:22rem;
+  /*dù có nhiều khoảng trống thì kbh rộng hơn 22rem*/
+
+  border-radius: 12px;
+  background-color: white;
+  text-align: center;
+  border: solid 2px #53A4CF;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+.blog-post-card:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s linear;
+}
+
+.post-content{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.read-more{
+  background-color: #53A4CF;
+  margin-top: auto;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+}
+
+.read-more:hover{
+  color: white;
+  background-color: #154B95;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.post-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  height: auto;
+  object-fit: cover;
+  border: none;
+  border-bottom: solid 4px #53A4CF;
+  border-radius: 12px 12px 0 0;
+}
+
+.post-title{
+  color: #154B95;
+  min-height: 5.5rem;
+}
+.post-excerpt{
+  color: #2D74A8;
+  min-height: 8.5rem;
+  line-height: 1.5;
+}
+
+/* FORMS & BUTTONS */
+.form {
+  text-align:center;
+  width: 90%;
+  padding: 1rem;
+  background-color: #E6ECF8;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  border-style: solid;
+  border-color: #8CC4DF;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+input, button, textarea{
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  margin: 0.3125rem;
+  padding: 0.3125rem;
+  color: #154B95
+}
+
+
+input{
+  border-radius: 10px;
+  min-height: 2.5rem;
+  border: #53A4CF 2px solid;
+  background-color: #F2F5FC;
+  padding: 0.3125rem;
+}
+
+input:focus, textarea:focus{
+  border-color: #53A4CF;
+  margin: 1px;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4); 
+  outline: none;     
+}
+
+button{
+  padding: 0.8rem 1.5rem;
+  width:auto;
+  min-width: 6rem;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  font-weight: bold;
+  color: #2D74A8;
+  background-color: #D4EEED;
+}
+
+button:hover{
+  color: #154B95;
+  background-color: #F2F5FC;
+  transform: scale(1.05);
+  transition: transform 0.3s linear;
+}
+
+textarea{
+  width: 100%;
+  max-width: 36rem;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  background-color: #F2F5FC;
+}
+
+fieldset{
+  border: 2px solid #53A4CF;
+}
+
+fieldset legend{
+  font-size: 18px;
+  color: #154B95;
+}
+
+.checkbox {
+  appearance: none;
+  width:18px;
+  height:18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  vertical-align: middle;
+}
+/*inline-block cho cùng hàng cx dc nhưng tùy chỉnh dc height và width*/
+
+.checkbox:hover {
+  border-color: #888;
+}
+
+.checkbox:checked {
+  background-color: #8CC4DF;
+  border-color: #53A4CF;
+}
+
+.checkbox:checked::after{
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #154B95;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg)
+}
+/*Đang làm dấu tick 
+làm chữ L => rotate
+position absolute là cố định chứ k relative*/
+.checkbox:focus{
+  outline: 2px solid #8CC4DF;
+  outline-offset: 2px;
+}
+/*offset đẩy ra xa phần tử 1 chút*/
+
+hr{
+  height: 2px;
+  background-color: yellow;
+  border-color:  black;
+}
+
+.aca-color{
+    color: #154B95;
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-wrap: wrap;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#contact_0{
+  background-color: #E6ECF8;
+  padding: 1.25rem;
+  border-radius: 8px;
+  line-height: 1.6; /*khoảng cách giữa các dòng*/
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 0px;
+}
+
+a:active:not(.content-section) {
+  color: black;
+}
+
+.contact{
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 6rem;
+  padding: 0.5rem 0.8rem;
+  min-height: 2rem;
+  border-radius: 12px;
+  border: #53A4CF 2px solid;
+  font-weight: bold;
+  color: #2D74A8;
+  background-color: #D4EEED;
+  margin-right: 10px;
+  margin-bottom: 5px;
+
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+.contact:hover{
+  color: #154B95;
+  background-color: #F2F5FC;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.personal-contact{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
