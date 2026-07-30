@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    background-color: #F2F5FC;
+    font-family: "Exo 2", sans-serif;
+}
+
+/*NAV-BAR + TABLE OF CONTENT*/
+.table-of-content{
+    display: flex;
+    justify-content: flex-end; /*chia đều kcach với nhau theo trục ngang*/
+    flex-wrap: wrap;  /*xuống dòng nếu tràn*/
+}
+
+#header{
+    position: sticky;
+    top: 0;
+    height: 5rem;
+    padding: 15px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D4EEED;
+}
+
+.table-of-content{
+    display: flex;
+    gap: 3rem;
+}
+
+.content-section{
+    color: black;
+    font-size: 20px;
+
+    margin: 0;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    padding: 0.9375rem;
+
+    transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.point{
+    background-color: #FBF2AD;
+    border-radius: 0.75rem;
+    text-align: center;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgb(198, 198, 198);
+    transition: transform 0.3s, background-color 0.3s ease;
+}
+
+
+.content-section:hover{
+  color: #154B95;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  text-shadow: 0 4px 8px rgb(198, 198, 198);
+}
+
+/*khi thu nhỏ*/
+
+.menu-btn{
+    display: none;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px){
+
+    .menu-btn{
+        display: block;
+    }
+
+    .table-of-content{
+        display: none;
+    }
+}
