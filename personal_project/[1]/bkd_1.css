@@ -1,7 +1,18 @@
+/*  BODY & TYPOGRAPHY  */
 body{
     margin: 0;
     background-color: #F2F5FC;
     font-family: "Exo 2", sans-serif;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: "IBM Plex Mono", monospace;
+  text-align: center;
+} /*căn text ở giữa*/
+
+*{
+  scroll-behavior: smooth;
 }
 
 /*NAV-BAR + TABLE OF CONTENT*/
@@ -20,7 +31,7 @@ body{
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #D4EEED;
+    background: #C4DFF0 99%;
 }
 
 .table-of-content{
@@ -78,4 +89,89 @@ body{
     .table-of-content{
         display: none;
     }
+}
+
+/*DARK-MODE*/
+.dark-mode{
+    padding: 0.45rem;
+    margin-right: 40px;
+    border: 2px grey solid;
+    border-radius: 12px;
+    background-color: #D3D3D3;
+}
+
+.dark-mode:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/*HOME PAGE*/
+.title {
+    font-family: "IBM Plex Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
+
+    min-height: calc(100vh - 110px); /*trừ chiều cao nav-bar*/
+    width: 100%;
+    padding: 0.9375rem;
+    background: radial-gradient(circle, #C4DFF0 10%, #F2F5FC 80%);
+    color: #154B95;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+.title_1 {
+  position: sticky;
+  top: 1.25rem;
+
+  font-family: "IBM Plex Mono", monospace;
+  width: 90%;
+  padding: 0.9375rem;
+  background-color: #8CC4DF;
+  color: #13293d;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: #53A4CF;
+  border-left: 5px solid #154B95;
+  border-right: 5px solid #154B95;
+  border-top: none; border-bottom: none;
+}
+
+.intro_caption{
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.intro_caption_box{
+    width: 1rem;
+}
+
+/*UW BUTTON*/
+.uw-logo{
+  color :black;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  background-color: #FED34C;
+
+  border-radius: 0.75rem;
+  border: solid 2px black;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-left: 0.3125rem;
+  vertical-align: text-bottom;
+}
+
+.uw-logo:hover{
+  transition: transform 0.3s linear;
+  transform: scale(1.05)
 }
