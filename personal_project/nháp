@@ -1,2 +1,4 @@
-/*- loading: lazy
+- loading: lazy
 - đi chia thành nhiều file html
+- Chia theo grid ở mục giới thiệu
+
