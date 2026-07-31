@@ -5,6 +5,9 @@ body{
     font-family: "Exo 2", sans-serif;
 }
 
+main:not(#home){
+    background: radial-gradient(circle, #C4DFF0 10%, #F2F5FC 80%);
+}
 
 h1, h2, h3, h4 {
   font-family: "IBM Plex Mono", monospace;
@@ -117,7 +120,12 @@ h1, h2, h3, h4 {
     min-height: calc(100vh - 110px); /*trừ chiều cao nav-bar*/
     width: 100%;
     padding: 0.9375rem;
-    background: radial-gradient(circle, #C4DFF0 10%, #F2F5FC 80%);
+
+    background-image: url("https://i.postimg.cc/02Yv2Xfd/Thiet-ke-chua-co-ten-(11).png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: #154B95;
     margin-left: auto;
     margin-right: auto;
@@ -125,7 +133,6 @@ h1, h2, h3, h4 {
 }
 
 .title_1 {
-  position: sticky;
   top: 1.25rem;
 
   font-family: "IBM Plex Mono", monospace;
@@ -170,3 +177,31 @@ h1, h2, h3, h4 {
   transition: transform 0.3s linear;
   transform: scale(1.05)
 }
+
+/*FOOTER*/
+.footer{
+    width: 100%;
+    font-size: 1.1rem;
+
+    padding: 1.2rem;
+
+    text-align: center;
+
+    background-color: #C4DFF0;
+    color: #4D4E53;
+}
+
+/*ABOUT*/
+.profile-image{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 100%;
+    height: auto;
+
+    padding: 1rem;
+    border-radius: 3.75rem;
+    background-color: #F6FCFF;
+    box-sizing: border-box;
+} /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
