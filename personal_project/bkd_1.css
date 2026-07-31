@@ -196,7 +196,8 @@ h1, h2, h3, h4 {
     margin-left: auto;
     margin-right: auto;
 
-    max-width: 100%;
+    width:100%;
+    max-width:520px;
     height: auto;
 
     padding: 1rem;
@@ -228,27 +229,33 @@ figcaption{
 }
 
 .paragraph{
-  width: 90%;
-  font-size: 1.2rem;
-  padding: 0.9375rem;
-  background-color: #F6FCFF;
-  color: #154B95;
-  margin-left:0;
-  box-sizing:border-box;
-  border-radius: 0.5rem;
-  line-height: 1.6; /*khoảng cách giữa các dòng*/
-  box-shadow: 0 4px 8px rgb(198, 198, 198);
+
+    width: 100%;
+    font-size: 1.45rem;
+    padding: 2rem;
+    background-color: #F6FCFF;
+    color: #154B95;
+    margin-left:0;
+    box-sizing:border-box;
+    border-radius: 12px;
+    line-height: 1.8; /*khoảng cách giữa các dòng*/
+    box-shadow: 0 4px 8px rgb(198, 198, 198);
 }
 
 figure{
-    margin:0;
+    width:100%;
 }
+
 
 .about-section{
     display: grid;
-    grid-template-columns: 40% 60%;
-    align-items: center;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    width: min(1400px, 92%);
+    margin: 0 auto;
+
+    align-items: start;
 }
 
 @media (max-width:768px){
@@ -258,4 +265,92 @@ figure{
         text-align: center;
     }
 
+}
+
+.experience{
+    padding: 2rem;
+    background-color: #F6FCFF;
+    box-shadow: 0 4px 8px rgb(198, 198, 198);
+    border-radius: 12px;
+    min-height:180px;
+    margin-bottom: 3rem;
+}
+
+.exp_title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-skills{
+    margin: 0;
+    color:#154B95;
+}
+
+.skills{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.7rem 1.4rem;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    background-color: #8CC4DF;
+    border: 2px solid black;
+    border-radius: 0.75rem;
+}
+
+.exp_buttons{
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about-content{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+/*CONTACT*/
+.contact{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+
+    padding: 0.25rem;  
+    width: 10.625rem;
+    height: 3.75rem;
+    border-radius: 0.75rem;
+    border: #53A4CF 2px solid;
+    font-weight: bold;
+    color: #2D74A8;
+    background-color: #D4EEED;
+    margin-right: 0.625rem;  
+    margin-bottom: 0.3125rem;
+
+    box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+
+.contact:hover{
+    color: #154B95;
+    background-color: #F2F5FC;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.personal-contact{
+    display: flex;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+}
+
+#aboutme{
+    padding:4rem 0 6rem;
 }
