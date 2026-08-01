@@ -5,6 +5,15 @@ body{
     font-family: "Exo 2", sans-serif;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 main:not(#home){
     background: radial-gradient(circle, #C4DFF0 10%, #F2F5FC 80%);
 }
