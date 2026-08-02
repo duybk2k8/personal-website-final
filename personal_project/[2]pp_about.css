@@ -13,48 +13,6 @@
     box-sizing: border-box;
 } /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
 
-#fig-div{
-    padding: 0.625rem;
-    background-color:#F6FCFF;
-    width: 20rem;
-    border-radius: 0.5625rem;
-    margin: -1rem auto 3rem;
-}
-
-@media (max-width: 768px) {
-  #fig-div {
-    margin: -1rem auto 1rem;
-  }
-}
-/*Nếu nó <= 768px thì sẽ là -1 chứ k là -1.075 nữa*/
-
-figcaption{
-    text-align: center;   
-    font-size: 1.3rem; 
-    padding: 0.4125rem; 
-    border-radius: 0.5625rem; 
-    background-color:#D4EEED;
-}
-
-.paragraph{
-
-    width: 100%;
-    font-size: 1.45rem;
-    padding: 2rem;
-    background-color: #F6FCFF;
-    color: #154B95;
-    margin-left:0;
-    box-sizing:border-box;
-    border-radius: 12px;
-    line-height: 1.8; /*khoảng cách giữa các dòng*/
-    box-shadow: 0 4px 8px rgb(198, 198, 198);
-}
-
-figure{
-    width:100%;
-}
-
-
 .about-section{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -71,6 +29,46 @@ figure{
         text-align: center;
     }
 
+}
+
+#fig-div{
+    padding: 0.625rem;
+    background-color:#F6FCFF;
+    width: 17rem;
+    border-radius: 0.5625rem;
+    margin: -1rem auto 3rem;
+}
+
+@media (max-width: 768px) {
+  #fig-div {
+    margin: -1rem auto 1rem;
+  }
+}
+/*Nếu nó <= 768px thì sẽ là -1 chứ k là -1.075 nữa*/
+
+figcaption{
+    text-align: center;   
+    font-size: 1rem; 
+    padding: 0.4125rem; 
+    border-radius: 0.5625rem; 
+    background-color:#D4EEED;
+}
+
+.paragraph{
+    width: 100%;
+    font-size: 1rem;
+    padding: 2rem;
+    background-color: #F6FCFF;
+    color: #154B95;
+    margin-left:0;
+    box-sizing:border-box;
+    border-radius: 12px;
+    line-height: 1.8; /*khoảng cách giữa các dòng*/
+    box-shadow: 0 4px 8px rgb(198, 198, 198);
+}
+
+figure{
+    width:100%;
 }
 
 .experience{
