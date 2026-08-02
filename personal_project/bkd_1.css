@@ -1,10 +1,47 @@
 /*  BODY & TYPOGRAPHY  */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     background-color: #F2F5FC;
     font-family: "Exo 2", sans-serif;
 }
 
+main *{
+    animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.985);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+/*Cho nó có animation*/
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main:not(#home){
+    background: radial-gradient(circle, #C4DFF0 10%, #F2F5FC 80%);
+}
 
 h1, h2, h3, h4 {
   font-family: "IBM Plex Mono", monospace;
@@ -25,8 +62,9 @@ h1, h2, h3, h4 {
 #header{
     position: sticky;
     top: 0;
-    height: 5rem;
-    padding: 15px;
+    z-index: 1000;
+    height: 4.7rem;
+    padding: 0.95rem;
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
@@ -36,21 +74,24 @@ h1, h2, h3, h4 {
 
 .table-of-content{
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .content-section{
     color: black;
-    font-size: 20px;
+    font-size: 0.9rem;
 
     margin: 0;
     text-decoration: none;
 
     cursor: pointer;
 
-    padding: 0.9375rem;
+    padding: 0.6rem;
 
     transition: transform 0.3s, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .point{
@@ -93,11 +134,24 @@ h1, h2, h3, h4 {
 
 /*DARK-MODE*/
 .dark-mode{
-    padding: 0.45rem;
+    padding: 0.1rem;
     margin-right: 40px;
     border: 2px grey solid;
     border-radius: 12px;
     background-color: #D3D3D3;
+
+    height: 3rem;
+    width: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-mode img{
+    height: 2.3rem;
+    width: 2.3rem;
+    display: block;
 }
 
 .dark-mode:hover{
@@ -106,40 +160,19 @@ h1, h2, h3, h4 {
 }
 
 /*HOME PAGE*/
-.title {
-    font-family: "IBM Plex Mono", monospace;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;     
-    text-align: center;
-
-    min-height: calc(100vh - 110px); /*trừ chiều cao nav-bar*/
-    width: 100%;
-    padding: 0.9375rem;
-    background: radial-gradient(circle, #C4DFF0 10%, #F2F5FC 80%);
-    color: #154B95;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 5px 8px rgb(198, 198, 198);
-}
 
 .title_1 {
-  position: sticky;
-  top: 1.25rem;
-
-  font-family: "IBM Plex Mono", monospace;
-  width: 90%;
-  padding: 0.9375rem;
-  background-color: #8CC4DF;
-  color: #13293d;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: solid;
-  border-color: #53A4CF;
-  border-left: 5px solid #154B95;
-  border-right: 5px solid #154B95;
-  border-top: none; border-bottom: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.3rem;
+    width: 100%;
+    padding: 0.9375rem;
+    background-color: #8CC4DF;
+    color: #154B95;
+    margin: 0rem auto 3rem auto;
+    border-style: solid;
+    border-color: #53A4CF;
+    border-top: 2px solid #154B95;
+    border-bottom: 2px solid #154B95;
 }
 
 .intro_caption{
@@ -147,26 +180,22 @@ h1, h2, h3, h4 {
   font-weight: 600;
   text-align: justify;
 }
-/*UW BUTTON*/
-.uw-logo{
-  color :black;
-  text-decoration: none;
-  font-size: 0.95rem;
-  padding: 0.4rem 0.6rem;
-  background-color: #FED34C;
 
-  border-radius: 0.75rem;
-  border: solid 2px black;
+/*FOOTER*/
+.footer{
+    width: 100%;
+    height: 4rem;
+    font-size: 0.9rem;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-  margin-left: 0.3125rem;
-  vertical-align: text-bottom;
+    padding: 1.2rem;
+
+    text-align: center;
+
+    background-color: #C4DFF0;
+    color: #4D4E53;
 }
 
-.uw-logo:hover{
-  transition: transform 0.3s linear;
-  transform: scale(1.05)
+
+#aboutme{
+    padding: 2rem 0 1rem;
 }

@@ -1,0 +1,165 @@
+/*ABOUT*/
+.profile-image{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+
+    width:100%;
+    height: auto;
+
+    padding: 1rem;
+    border-radius: 3.75rem;
+    background-color: #F6FCFF;
+    box-sizing: border-box;
+} /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
+
+.about-section{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    width: min(1400px, 92%);
+    margin:auto;
+    gap: 5rem;
+}
+
+@media (max-width:768px){
+
+    .about-section{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}
+
+#fig-div{
+    padding: 0.625rem;
+    background-color:#F6FCFF;
+    width: 17rem;
+    border-radius: 0.5625rem;
+    margin: -1rem auto 3rem;
+}
+
+@media (max-width: 768px) {
+  #fig-div {
+    margin: -1rem auto 1rem;
+  }
+}
+/*Nếu nó <= 768px thì sẽ là -1 chứ k là -1.075 nữa*/
+
+figcaption{
+    text-align: center;   
+    font-size: 1rem; 
+    padding: 0.4125rem; 
+    border-radius: 0.5625rem; 
+    background-color:#D4EEED;
+}
+
+.paragraph{
+    width: 100%;
+    font-size: 1rem;
+    padding: 2rem;
+    background-color: #F6FCFF;
+    color: #154B95;
+    margin-left:0;
+    box-sizing:border-box;
+    border-radius: 12px;
+    line-height: 1.8; /*khoảng cách giữa các dòng*/
+    box-shadow: 0 4px 8px rgb(198, 198, 198);
+}
+
+figure{
+    width:100%;
+}
+
+.experience{
+    padding: 2rem;
+    background-color: #F6FCFF;
+    box-shadow: 0 4px 8px rgb(198, 198, 198);
+    border-radius: 12px;
+    min-height:180px;
+    margin-bottom: 3rem;
+}
+
+.exp_title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-skills{
+    margin: 0;
+    color:#154B95;
+}
+
+.skills{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.4rem 1rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    background-color: #8CC4DF;
+    border: 2px solid black;
+    border-radius: 0.75rem;
+}
+
+.exp_buttons{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    background-color: #D4EEED;
+}
+
+.exp_title > div{
+    font-size: 1.5rem;
+}
+
+.about-content{
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+}
+
+/*CONTACT*/
+.contact_about{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+
+    padding: 0.25rem;  
+    width: 7.625rem;
+    height: 3.75rem;
+    border-radius: 0.75rem;
+    border: #53A4CF 2px solid;
+    font-weight: bold;
+    color: #2D74A8;
+    background-color: #D4EEED;
+    margin-right: 0.625rem;  
+    margin-bottom: 0.3125rem;
+
+    box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+
+.contact_about:hover{
+    color: #154B95;
+    background-color: #F2F5FC;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.personal-contact{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}

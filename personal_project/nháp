@@ -1,4 +1,3 @@
-- loading: lazy
-- đi chia thành nhiều file html
-- Chia theo grid ở mục giới thiệu
 
+- chỉnh lại tỉ lệ
+- dùng min-max cho grid
