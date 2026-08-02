@@ -5,7 +5,6 @@
     margin-right: auto;
 
     width:100%;
-    max-width:520px;
     height: auto;
 
     padding: 1rem;
@@ -17,9 +16,9 @@
 #fig-div{
     padding: 0.625rem;
     background-color:#F6FCFF;
-    width: min(15rem , 90%);
+    width: 20rem;
     border-radius: 0.5625rem;
-    margin: -1.075rem auto 3rem;
+    margin: -1rem auto 3rem;
 }
 
 @media (max-width: 768px) {
@@ -30,7 +29,8 @@
 /*Nếu nó <= 768px thì sẽ là -1 chứ k là -1.075 nữa*/
 
 figcaption{
-    text-align: center;    
+    text-align: center;   
+    font-size: 1.3rem; 
     padding: 0.4125rem; 
     border-radius: 0.5625rem; 
     background-color:#D4EEED;
@@ -56,14 +56,12 @@ figure{
 
 
 .about-section{
-    display: grid;
+    display:grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
 
     width: min(1400px, 92%);
-    margin: 0 auto;
-
-    align-items: start;
+    margin:auto;
+    gap: 5rem;
 }
 
 @media (max-width:768px){
@@ -113,9 +111,14 @@ figure{
     display: flex;
     justify-content: space-between;
     gap:1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    padding: 3rem;
+    border-radius: 12px;
+    background-color: #D4EEED;
 }
+
+
 
 .about-content{
     display:flex;
@@ -157,4 +160,5 @@ figure{
     display: flex;
     gap: 0.625rem;
     flex-wrap: wrap;
+    justify-content: center;
 }

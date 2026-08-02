@@ -56,8 +56,8 @@ h1, h2, h3, h4 {
 #header{
     position: sticky;
     top: 0;
-    height: 5rem;
-    padding: 15px;
+    height: 2.5rem;
+    padding: 0.95rem;
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
@@ -67,19 +67,19 @@ h1, h2, h3, h4 {
 
 .table-of-content{
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .content-section{
     color: black;
-    font-size: 20px;
+    font-size: 0.9rem;
 
     margin: 0;
     text-decoration: none;
 
     cursor: pointer;
 
-    padding: 0.9375rem;
+    padding: 0.7rem;
 
     transition: transform 0.3s, background-color 0.3s ease;
 }
@@ -124,11 +124,19 @@ h1, h2, h3, h4 {
 
 /*DARK-MODE*/
 .dark-mode{
-    padding: 0.45rem;
+    padding: 0.1rem;
     margin-right: 40px;
     border: 2px grey solid;
     border-radius: 12px;
     background-color: #D3D3D3;
+
+    height: 2rem;
+    width: 2rem;
+}
+
+a img{
+    height: 2rem;
+    width: 2rem;
 }
 
 .dark-mode:hover{
@@ -139,19 +147,19 @@ h1, h2, h3, h4 {
 /*HOME PAGE*/
 
 .title_1 {
-  top: 1.25rem;
+  top: 1rem;
 
   font-family: "IBM Plex Mono", monospace;
-  width: 90%;
+  font-size: 2rem;
+  width: 100%;
   padding: 0.9375rem;
   background-color: #8CC4DF;
-  color: #13293d;
+  color: #154B95;
   margin: 2rem auto 3rem auto;
   border-style: solid;
   border-color: #53A4CF;
-  border-left: 5px solid #154B95;
-  border-right: 5px solid #154B95;
-  border-top: none; border-bottom: none;
+  border-top: 2px solid #154B95;
+  border-bottom: 2px solid #154B95;
 }
 
 .intro_caption{
