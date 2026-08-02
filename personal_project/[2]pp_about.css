@@ -16,6 +16,7 @@
 .about-section{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     width: min(1400px, 92%);
     margin:auto;
@@ -95,9 +96,9 @@ figure{
     justify-content: center;
     align-items: center;
 
-    padding: 0.7rem 1.4rem;
+    padding: 0.4rem 1rem;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
 
     background-color: #8CC4DF;
@@ -107,21 +108,23 @@ figure{
 
 .exp_buttons{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap:1rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    padding: 3rem;
+    padding: 2rem 3rem;
     border-radius: 12px;
     background-color: #D4EEED;
 }
 
-
+.exp_title > div{
+    font-size: 1.5rem;
+}
 
 .about-content{
     display:flex;
     flex-direction:column;
-    gap:2rem;
+    gap:1.5rem;
 }
 
 /*CONTACT*/
@@ -130,10 +133,10 @@ figure{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 
     padding: 0.25rem;  
-    width: 10.625rem;
+    width: 7.625rem;
     height: 3.75rem;
     border-radius: 0.75rem;
     border: #53A4CF 2px solid;
@@ -156,7 +159,7 @@ figure{
 
 .personal-contact{
     display: flex;
-    gap: 0.625rem;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
