@@ -11,9 +11,11 @@ body{
     font-family: "Exo 2", sans-serif;
 }
 
+
 main *{
     animation: fadeUp 0.8s ease-out;
 }
+
 
 @keyframes fadeUp {
   from {
@@ -41,9 +43,10 @@ main *{
 
 main:not(#home){
     background: radial-gradient(circle, #C4DFF0 10%, #F2F5FC 80%);
+    padding: 2rem 0 1rem;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4{
   font-family: "IBM Plex Mono", monospace;
   text-align: center;
 } /*căn text ở giữa*/
@@ -193,9 +196,4 @@ h1, h2, h3, h4 {
 
     background-color: #C4DFF0;
     color: #4D4E53;
-}
-
-
-#aboutme{
-    padding: 2rem 0 1rem;
 }

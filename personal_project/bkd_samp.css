@@ -58,6 +58,8 @@ h1, h2, h3, h4 {
 }
 
 .title_1 {
+  position: sticky;
+  top: 1.25rem;
 
   font-family: "IBM Plex Mono", monospace;
   width: 90%;
