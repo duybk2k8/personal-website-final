@@ -1,0 +1,41 @@
+/*PERSONAL INTEREST*/
+.song{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+
+iframe{
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16/9; /*tỉ lệ khung hình*/
+  height: auto;
+}
+
+#audio{
+    margin-bottom: 3rem;
+}
+
+.music-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 20%;
+  height: auto;
+
+  padding: 1rem;
+  border-radius: 3.75rem;
+  background-color: #f6fcff;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+} /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/

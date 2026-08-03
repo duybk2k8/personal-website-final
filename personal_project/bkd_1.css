@@ -197,3 +197,15 @@ h1, h2, h3, h4{
     background-color: #C4DFF0;
     color: #4D4E53;
 }
+
+.aca-color{
+    color: #154B95;
+    padding: 1rem;
+    background-color: #FBF2AD;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 12px;
+    border: 2px dashed #154B95;
+}
