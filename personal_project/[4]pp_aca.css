@@ -1,0 +1,125 @@
+/*  ACHIEVEMENTS & SCHOLARSHIPS  */
+#personalexp{
+    padding: 0 2rem 2rem;
+}
+
+.paragraph {
+  width: 40%;
+  font-size: 1rem;
+  padding: 2rem;
+  background-color: #f6fcff;
+  color: #154b95;
+  box-sizing: border-box;
+  border-radius: 12px;
+  line-height: 1.8; /*khoảng cách giữa các dòng*/
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  border: 2px dashed #154B95;
+}
+
+.aca-color{
+    color: #154B95;
+    padding: 1rem;
+    background-color: #FBF2AD;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 12px;
+    border: 2px dashed #154B95;
+}
+
+table {
+  width: 90%;
+  margin: 1.25rem auto;
+  table-layout: fixed; /*k qtam nội dung mà dựa vào width để chia bảng*/
+}
+th, td{
+  text-align: center;
+  border: 1px black solid;
+  padding: 0.45rem;
+}
+
+td{
+  background-color: #D4EEED;
+}
+
+tr[class="table-head"] > th{
+  background-color: #8CC4DF;
+}
+
+tr[class="table-head"] > th:first-child{
+  border-top-left-radius: 0.5625rem;
+}
+
+tr[class="table-head"] > th:last-child{
+  border-top-right-radius: 0.5625rem;
+}
+
+tr[class="table-bottom"] > td:first-child{
+  border-bottom-left-radius: 0.5625rem;
+}
+
+tr[class="table-bottom"] > td:last-child{
+  border-bottom-right-radius: 0.5625rem;
+}
+
+.achievements li{
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+  font-size: 1rem;
+  background-color: #F2F5FC;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1.5px solid black;
+  opacity: 0.9;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.achievements li:hover{
+    transform: scale(1.02);
+    transition: 0.3s linear;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.item{
+  display: flex; /*dùng để tạo 1 hàng / cột linh hoạt cho phần tử con => căn*/
+  justify-content: space-between;
+  align-items: baseline; /*căn phần tử theo đường baseline của văn bản*/
+  gap: 1.5rem;
+}
+
+.award {
+  flex: 1; /*lấy toàn khoảng trống còn lại, tên trường nằm sát phải*/
+}
+
+.school{
+  flex-shrink: 0; /*k cho co nhỏ khi k đủ chỗ*/
+  text-align: right;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.item p {
+  margin: 0.3125rem 0;
+  font-size: 1rem;
+}
+
+ul[class="scholarship"]{
+  margin-bottom: 2.1875rem;
+  padding: 1.4rem 1.2rem 1.4rem 1.2rem;
+  border-left: 4px #154B95 solid;
+  border-right: 4px #154B95 solid;
+  background-color: #D4EEED ;
+}
+
+
+

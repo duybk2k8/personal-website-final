@@ -1,72 +1,68 @@
 /*TỪNG MỤC PROJECT*/
-.project{
+.project {
   display: flex;
   flex-direction: column;
-  max-width:30rem;
+  max-width: 30rem;
   border-radius: 12px;
   background-color: white;
   text-align: center;
-  border: solid 2px #53A4CF;
+  border: solid 2px #53a4cf;
   margin-bottom: 30px;
   box-shadow: 0 5px 8px rgb(198, 198, 198);
-  background-color: #D4EEED;
+  background-color: #d4eeed;
   padding: 1rem;
 }
 
-.project:hover{
+.project:hover {
   transform: scale(1.05);
   transition: 0.3s linear;
 }
 
-.project-grid{
+.project-grid {
   margin-left: 1rem;
   margin-right: 1rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(22rem, 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   gap: 2rem;
 }
 
-
-.project-heading{
+.project-heading {
   display: flex;
   justify-content: flex-start;
 }
 
-#star{
+#star {
   width: 2rem;
   height: 2rem;
   position: relative;
   margin-right: 0.5rem;
 }
 
-.project-category{
+.project-category {
   font-weight: bold;
-  color: #2D74A8;
+  color: #2d74a8;
   position: relative;
   top: -0.5rem;
 }
 
-.project-name{
-  color: #154B95;
+.project-name {
+  color: #154b95;
 }
 
-.project h3{
+.project h3 {
   margin: 0;
   text-shadow: 0 4px 8px rgb(198, 198, 198);
 }
 
-.project > p{
-  background-color: #FBF2AD;
+.project > p {
+  background-color: #fbf2ad;
   padding: 1rem;
   border: 2px solid black;
   border-radius: 0.75rem;
   text-align: justify;
 }
 
-.tag div{
+.tag div {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -76,17 +72,17 @@
   font-size: 0.7rem;
   font-weight: 600;
 
-  background-color: #8CC4DF;
+  background-color: #8cc4df;
   border: 2px solid black;
   border-radius: 0.75rem;
 }
 
-.tag div:hover{
+.tag div:hover {
   transform: scale(1.05);
   transition: 0.3s linear;
 }
 
-.tag{
+.tag {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -94,10 +90,10 @@
   margin-top: -1rem;
 }
 
-.git-nav{
-  background-color: #154B95;
+.git-nav {
+  background-color: #154b95;
   text-decoration: none;
-  color: #D4EEED;
+  color: #d4eeed;
   padding: 0.75rem;
   width: 40%;
 
@@ -111,16 +107,15 @@
   margin-right: auto;
 }
 
-.git-nav::before{
-  content:"";
+.git-nav::before {
+  content: "";
   display: inline-block;
   width: 1.8rem;
-  height: 1.8rem; 
+  height: 1.8rem;
 
   background-image: url("https://i.postimg.cc/y60hvfS1/git.png");
   background-size: contain; /*Phóng to thu nhỏ để all ảnh nằm gọn trong khung k bị cắt*/
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 0.2rem;
-
 }
