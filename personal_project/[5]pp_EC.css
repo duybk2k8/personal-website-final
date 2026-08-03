@@ -30,6 +30,10 @@
   flex-direction: column;
 }
 
+.post-content a{
+    text-decoration: none;
+}
+
 .read-more {
   background-color: #53a4cf;
   margin-top: auto;

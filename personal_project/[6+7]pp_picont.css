@@ -181,15 +181,24 @@ a:active:not(.content-section) {
   color: black;
 }
 
-.contact {
-  padding: 0.25rem;
-  height: 2.875rem;
-  width: 7.625rem;
+
+.contact{
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.25rem;  
+  height: 2.875rem;  
+  width: 7.625rem; 
   border-radius: 0.75rem;
-  border: #53a4cf 2px solid;
+  border: #53A4CF 2px solid;
   font-weight: bold;
-  color: #2d74a8;
-  background-color: #d4eeed;
+  color: #2D74A8;
+  background-color: #D4EEED;
+  margin-right: 0.625rem;  
+  margin-bottom: 0.3125rem;
+
   box-shadow: 0 5px 8px rgb(198, 198, 198);
 }
 
@@ -229,4 +238,30 @@ a:active:not(.content-section) {
   margin: 2rem auto;
 
   align-items: start;
+}
+
+small {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+
+    background-color: #f2f5fc;
+    padding: 0.5rem;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 9px;
+    border: 2px #2D74A8 solid;
+}
+
+small a{
+    text-decoration: none;
+    color: #2D74A8;
+    font-weight: bold;
+}
+
+small:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s linear;
+    color: #154B95;
 }
