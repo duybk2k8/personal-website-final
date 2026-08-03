@@ -1,5 +1,5 @@
 /*PERSONAL INTEREST*/
-.song{
+.song {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,22 +7,21 @@
   margin-bottom: 2.5rem;
 }
 
-.video{
+.video {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
 }
 
-
-iframe{
+iframe {
   width: 100%;
   max-width: 560px;
   aspect-ratio: 16/9; /*tỉ lệ khung hình*/
   height: auto;
 }
 
-#audio{
-    margin-bottom: 3rem;
+#audio {
+  margin-bottom: 3rem;
 }
 
 .music-image {
@@ -39,3 +38,195 @@ iframe{
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgb(198, 198, 198);
 } /*text-align chỉ cho phần tử inline (như văn bản, liên kết <a>)==> cái này là inline-block => k dùng dc*/
+
+/*FORM + CONTACT + MAP*/
+.form {
+  text-align: center;
+  width: 90%;
+  padding: 1rem;
+  background-color: #e6ecf8;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  border-style: solid;
+  border-color: #8cc4df;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+input,
+button,
+textarea {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  margin: 0.3125rem;
+  padding: 0.3125rem;
+  color: #154b95;
+}
+
+input {
+  border-radius: 10px;
+  height: 2.5rem;
+  border: #53a4cf 2px solid;
+  background-color: #f2f5fc;
+  padding: 0.3125rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #53a4cf;
+  margin: 0.0625rem;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4);
+  outline: none;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  width: auto;
+  min-width: 6rem;
+  border-radius: 0.75rem;
+  border: #53a4cf 2px solid;
+  font-weight: bold;
+  color: #2d74a8;
+  background-color: #d4eeed;
+}
+
+button:hover {
+  color: #154b95;
+  background-color: #f2f5fc;
+  transform: scale(1.05);
+  transition: transform 0.3s linear;
+}
+
+textarea {
+  width: 100%;
+  max-width: 36rem;
+  border-radius: 0.75rem;
+  border: #53a4cf 2px solid;
+  background-color: #f2f5fc;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 2px solid #53a4cf;
+  border-radius: 0.75rem;
+}
+
+fieldset legend {
+  font-size: 1.125rem;
+  color: #154b95;
+}
+
+.checkbox {
+  appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  vertical-align: middle;
+}
+/*inline-block cho cùng hàng cx dc nhưng tùy chỉnh dc height và width*/
+
+.checkbox:hover {
+  border-color: #888;
+}
+
+.checkbox:checked {
+  background-color: #8cc4df;
+  border-color: #53a4cf;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 0;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid #154b95;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/*Đang làm dấu tick 
+làm chữ L => rotate
+position absolute là cố định chứ k relative*/
+.checkbox:focus {
+  outline: 2px solid #8cc4df;
+  outline-offset: 2px;
+}
+/*offset đẩy ra xa phần tử 1 chút*/
+
+/*CONTACT*/
+#contact_0 {
+  background-color: #e6ecf8;
+  border-radius: 8px;
+  width: 80%;
+  line-height: 1.6; /*khoảng cách giữa các dòng*/
+  box-shadow: 0 4px 8px rgb(198, 198, 198);
+  padding: 1.25rem; /* 20 ÷ 16 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+a:active:not(.content-section) {
+  color: black;
+}
+
+.contact {
+  padding: 0.25rem;
+  height: 2.875rem;
+  width: 7.625rem;
+  border-radius: 0.75rem;
+  border: #53a4cf 2px solid;
+  font-weight: bold;
+  color: #2d74a8;
+  background-color: #d4eeed;
+  box-shadow: 0 5px 8px rgb(198, 198, 198);
+}
+
+.contact:hover {
+  color: #154b95;
+  background-color: #f2f5fc;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.personal-contact {
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+
+.map_contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 40rem;
+}
+
+.map{
+    padding: 1rem;
+    background-color: #e6ecf8;
+    box-shadow: 0 5px 8px rgb(198, 198, 198);
+    border-radius: 12px;
+}
+
+.contact-decor {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  width: min(95%, 90rem);
+  margin: 2rem auto;
+
+  align-items: start;
+}
